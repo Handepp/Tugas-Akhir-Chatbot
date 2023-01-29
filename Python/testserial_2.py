@@ -8,6 +8,7 @@ import time
 from sklearn.feature_extraction.text import CountVectorizer
 from fungsi import *
 from joblib import load
+import numpy
 
 import speech_recognition as sr
 import pyttsx3
