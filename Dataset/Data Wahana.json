@@ -1,6 +1,21 @@
 {
   "intents": [
     {
+      "tag": "Wardas",
+      "patterns": [
+        "Siapa kamu?",
+        "Kamu siapa?",
+        "Ini apa?",
+        "Kamu apa",
+        "Robot apakah kamu",
+        "Robot apa ini",
+        ""
+      ],
+      "responses": [
+        "Baik, Saya akan maju"
+      ]
+    },
+    {
       "tag": "Wahana Maju",
       "patterns": [
         "Robot coba kamu maju",
