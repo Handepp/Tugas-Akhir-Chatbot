@@ -6,13 +6,14 @@
         "Siapa kamu?",
         "Kamu siapa?",
         "Ini apa?",
-        "Kamu apa",
-        "Robot apakah kamu",
-        "Robot apa ini",
-        ""
+        "Kamu apa?",
+        "Robot apakah kamu?",
+        "Robot apa ini?",
+        "Apa kamu ini?"
       ],
       "responses": [
-        "Baik, Saya akan maju"
+        "Hai, saya adalah wardas, Wahana Cerdas.",
+        "Saya adalah Wardas, Wahana Cerdas"
       ]
     },
     {
