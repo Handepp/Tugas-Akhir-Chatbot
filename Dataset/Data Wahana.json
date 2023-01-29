@@ -1,0 +1,30 @@
+{
+  "intents": [
+    {
+      "tag": "Wahana Maju",
+      "patterns": [
+        "Robot coba kamu maju",
+        "Maju",
+        "Sini maju",
+        "Bergerak Maju",
+        "Maju jalan",
+        "Bergerak kedepan"
+      ],
+      "responses": [
+        "Baik, Saya akan maju"
+      ]
+    },
+    {
+      "tag": "Wahana Berhenti",
+      "patterns": [
+        "Stop",
+        "Berhenti",
+        "Diam",
+        "Cukup"
+      ],
+      "responses": [
+        "Saya berhenti"
+      ]
+    }
+  ]
+}
