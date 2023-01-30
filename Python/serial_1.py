@@ -15,6 +15,8 @@ import pyttsx3
 import wikipedia
 import pywhatkit
 
+import keyboard
+
 def chatbot ():
     chat = input("🧑 Kamu\t: ")       
     chat = text_preprocessing(chat)
@@ -27,12 +29,12 @@ def chatbot ():
     print(f"Max Prob : {max_prob}\nMax Index: {max_idx}\nLabel: {model.classes_[max_idx]}")
 
     if(model.classes_[max_idx] == 'Wahana Maju'):
-        forward_150()
+        #forward_150()
         print("Wahana Maju")
         time.sleep(1)
 
     if(model.classes_[max_idx] == 'Wahana Berhenti'):
-        stop_0()
+        #stop_0()
         print("Wahana Berhenti")
 
 def voice ():
@@ -60,8 +62,16 @@ def voice ():
 if __name__ == '__main__':
     listener = sr.Recognizer()
     player = pyttsx3.init()
-    arduino = serial.Serial('COM3',115200)
+    #arduino = serial.Serial('COM3',115200)
     time.sleep(2)
-    model = load('testwahana.model')
-    vocab = pickle.load(open('bow.pickle', 'rb'))
-    bow = CountVectorizer(ngram_range=(1,1))  
+    model = load('Python/Model/testwahana.model')
+    vocab = pickle.load(open('Python/Model/bow.pickle', 'rb'))
+    bow = CountVectorizer(ngram_range=(1,1))
+
+    print("tekan a untuk chat, tekan b untuk voice")
+
+    if keyboard.read_key()== "a":
+        chatbot()  
+
+    elif keyboard.read_key()== "b":
+        voice()  
