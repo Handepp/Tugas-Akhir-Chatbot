@@ -9,13 +9,109 @@
         "Kamu apa?",
         "Robot apakah kamu?",
         "Robot apa ini?",
-        "Apa kamu ini?"
+        "Apa kamu ini?",
+        "Fungsi robot ini untuk apa?",
+        "Kamu berguna untuk apa?",
+        "Kamu itu apa?",
+        "Jelasan diri kamu?",
+        "Wardas itu untuk apa?"
       ],
       "responses": [
-        "Hai, saya adalah wardas, Wahana Cerdas.",
-        "Saya adalah Wardas, Wahana Cerdas"
+        "Hai, saya adalah wardas, Wahana Cerdas. Saya adalah wahana untuk mengirimkan barang secara otonom",
+        "Saya adalah Wardas, Wahana Cerdas. Saya berguna untuk mengirimkan barang secara otonom"
       ]
     },
+
+    {
+      "tag": "Sapa Wardas",
+      "patterns": [
+        "Halo wardas!",
+        "Haiiii",
+        "Haloooo",
+        "Hello",
+        "Hai Wardas",
+        "Pagi",
+        "Siang",
+        "Sore",
+        "Malam"
+      ],
+      "responses": [
+        "Halo, Wardas disini, Ada yang bisa saya bantu?",
+        "Hai, Wardas disini, apa kabarmu?",
+        "Hai juga, Ada yang bisa Wardas bantu?"
+      ]
+    },
+
+    {
+      "tag": "Siang Wardas",
+      "patterns": [
+        "Selamat Siang Wardas",
+        "Siang",
+        "Selamat siang",
+        "Siang Wardas"
+      ],
+      "responses": [
+        "Selamat siang juga, Ada yang bisa saya bantu?",
+        "Siang, Ada yang bisa saya bantu?"
+      ]
+    },
+
+    {
+      "tag": "Pagi Wardas",
+      "patterns": [
+        "Selamat pagi Wardas",
+        "pagi",
+        "Selamat pagi",
+        "pagi Wardas"
+      ],
+      "responses": [
+        "Selamat pagi juga, Ada yang bisa saya bantu?",
+        "pagi, Ada yang bisa saya bantu?"
+      ]
+    },
+
+    {
+      "tag": "Sore Wardas",
+      "patterns": [
+        "Selamat sore Wardas",
+        "sore",
+        "Selamat sore",
+        "sore Wardas"
+      ],
+      "responses": [
+        "Selamat sore juga, Ada yang bisa saya bantu?",
+        "sore, Ada yang bisa saya bantu?"
+      ]
+    },
+
+    {
+      "tag": "Malam Wardas",
+      "patterns": [
+        "Selamat malam Wardas",
+        "malam",
+        "Selamat malam",
+        "malam Wardas"
+      ],
+      "responses": [
+        "Selamat malam juga, Ada yang bisa saya bantu?",
+        "malam, Ada yang bisa saya bantu?"
+      ]
+    },
+
+    {
+      "tag": "Kabar Baik",
+      "patterns": [
+        "kabarku baik, Tidak masalah",
+        "Aku baik",
+        "Baik baik"
+      ],
+      "responses": [
+        "Senang mendengarnya",
+        "Baguslah kalau anda sedang baik-baik saja",
+        ""
+      ]
+    },
+    
     {
       "tag": "Wahana Maju",
       "patterns": [
