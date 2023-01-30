@@ -18,8 +18,8 @@ import pywhatkit
 listener = sr.Recognizer()
 player = pyttsx3.init()
 
-#cek123
 
+# Serial Arduino
 arduino = serial.Serial('COM3',115200)
 time.sleep(2)
 model = load('testwahana.model')
@@ -31,6 +31,7 @@ def forward_150():
 
 def stop_0():
     stop_0=arduino.write(str.encode('{"direction1":"stop","steps1":"0","speed1":"0","direction2":"stop","steps2":"0","speed2":"0"}--'))
+    
 
 
 def takeCommand():
