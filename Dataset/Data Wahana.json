@@ -107,8 +107,35 @@
       ],
       "responses": [
         "Senang mendengarnya",
-        "Baguslah kalau anda sedang baik-baik saja",
-        ""
+        "Baguslah kalau anda sedang baik-baik saja"
+      ]
+    },
+
+    {
+      "tag": "Lokasi",
+      "patterns": [
+        "Kamu berada dimana?",
+        "Robot kamu dimana?",
+        "Dimanakah kamu?",
+        "Berikan lokasi kamu",
+        "Tunjukkan Lokasi mu"
+
+      ],
+      "responses": [
+        "Saya berada di lokasi ini"
+      ]
+    },
+
+    {
+      "tag": "Temp",
+      "patterns": [
+        "Berapa suhu ruangan ini",
+        "Suhu ruangan ini",
+        "Beritahu suhu pada ruangan ini",
+        "Suhu saat ini"
+      ],
+      "responses": [
+        "Suhu tempat saya berada adalah"
       ]
     },
     
