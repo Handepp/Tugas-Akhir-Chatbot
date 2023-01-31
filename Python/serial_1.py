@@ -18,6 +18,9 @@ import pywhatkit
 
 import keyboard
 
+import warnings
+warnings.filterwarnings("ignore")
+
 def forward_150():
     forward_150 = arduino.write(str.encode('{"direction1":"forward","steps1":"30","speed1":"150","direction2":"forward","steps2":"30","speed2":"250"}'))
 
@@ -25,15 +28,19 @@ def forward_150():
 def chatbot ():
     global max_idx
     chat = input("🧑 Kamu\t: ")       
-    chat = text_preprocessing_process(chat,key_norm,stemmer)
-    
-    chat = vocab.transform([chat])          # Feature extraction. Mengubah teks menjadi vektor
-
-    res = model.predict_proba(chat)         # Prediksi vektor teks kedalam model machine learning
-
-    max_prob = max(res[0])                # Ambil nilai probabilitas & index lokasinya
-    max_idx = np.argmax(res[0])
-    print(f"Max Prob : {max_prob}\nMax Index: {max_idx}\nLabel: {model.classes_[max_idx]}")
+    prechat = text_preprocessing_process(chat)
+ 
+    #tf_idf_vec = TfidfVectorizer(decode_error="replace", vocabulary=set(vocab))
+    tf_idf = TfidfVectorizer(ngram_range=(1,1))
+    tf_idf.fit(prechat)
+    tf = tf_idf.transform(prechat).toarray()
+    res = model.predict_proba(tf) 
+    #hasil = model.predict(tf_idf.fit_transform([prechat]))
+    #res = model.predict(tf_idf_vec.fit_transform([chat]))         # Prediksi vektor teks kedalam model machine learning
+    print(res)
+    #max_prob = max(res[0])                # Ambil nilai probabilitas & index lokasinya
+    #max_idx = np.argmax(res[0])
+    #print(f"Max Prob : {max_prob}\nMax Index: {max_idx}\nLabel: {model.classes_[max_idx]}")
 
 def response() :
     if(model.classes_[max_idx] == 'Wahana Maju'):
@@ -75,13 +82,10 @@ if __name__ == '__main__':
     #arduino = serial.Serial('COM3',115200)
     time.sleep(1)
 
-    key_norm = pd.read_csv('Dataset/key_norm.csv')
-    factory = StemmerFactory()
-    stemmer = factory.create_stemmer()
+
     vocab = pickle.load(open('Python/Model/Fitur_TFIDF.pickle', 'rb'))
     model = load('Python/Model/DT_Wahana.model')
-
-
+    
     while True:
         print("tekan a untuk chat, tekan b untuk voice")
         if keyboard.read_key()== "a":
