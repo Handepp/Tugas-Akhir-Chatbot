@@ -138,6 +138,53 @@
         "Suhu tempat saya berada adalah"
       ]
     },
+
+    {
+      "tag": "Hump",
+      "patterns": [
+        "Berapa Kelembapan ruangan ini",
+        "Kelembapan ruangan ini",
+        "Beritahu Kelembapan pada ruangan ini",
+        "Kelembapan saat ini"
+      ],
+      "responses": [
+        "Kelembapan tempat saya berada adalah"
+      ]
+    },
+
+    {
+      "tag": "Terimakasih",
+      "patterns": [
+        "Makasih",
+        "Terima Kasih",
+        "Makasih Wardas",
+        "Thanks",
+        "Thank you",
+        "Tengkyu",
+        "Terima kasih banyak atas bantuanmu"
+      ],
+      "responses": [
+        "Sama sama, senang bisa membantu",
+        "Sama sama",
+        "Tidak masalah"
+      ]
+    },
+
+    {
+      "tag": "Pisah",
+      "patterns": [
+        "Selamat tinggal",
+        "Dadah",
+        "Sampai jumpa lagi",
+        "Pergi dulu ya",
+        "Cabut dulu"
+      ],
+      "responses": [
+        "Baik, hati-hati ya",
+        "Sampai jumpa lagi",
+        "Dadah"
+      ]
+    },
     
     {
       "tag": "Wahana Maju",
