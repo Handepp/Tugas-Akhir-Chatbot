@@ -117,7 +117,64 @@
       ],
       "responses": [
         "Hobi yaaa, Sejujurnya saya hanya melakukan hal untuk mengirimkan barang saja",
-        "Saya tidak memiliki hobi, saya hanya melakukan kegiatan untuk mengirimkan barang "
+        "Saya tidak memiliki hobi, saya hanya melakukan kegiatan untuk mengirimkan barang saja"
+      ]
+    },
+
+    {
+      "tag": "wardas.siap",
+      "patterns": [
+        "Apakah kamu siap?",
+        "Apakah robot sudah siap?",
+        "Apakah kamu sudah siap?",
+        "Ready?"
+      ],
+      "responses": [
+        "Tentu saja, saya siap",
+        "Saya siap melaksanakan perintah anda"
+      ]
+    },
+
+    {
+      "tag": "wardas.asal",
+      "patterns": [
+        "Darimana asalmu?",
+        "Kamu berasal dari mana?",
+        "Dimana kamu dibuat?",
+        "Dimana kamu diciptakan?",
+        "Robot ini diciptakan dimana?"
+      ],
+      "responses": [
+        "Saya diciptakan di labolatorium Universitas Padjadjaran",
+        "Saya dibuat dan dikembangkan di labolatorium Universitas Padjadjaran"
+      ]
+    },
+
+    {
+      "tag": "wardas.benar",
+      "patterns": [
+        "Kamu benar",
+        "Kamu mengatakan yang sebenarnya",
+        "Kamu [benar|pintar] dalam menjawab pertanyaan saya"
+      ],
+      "responses": [
+        "Tentu saja, itu pekerjaan saya",
+        "Tentu saja"
+      ]
+    },
+
+    {
+      "tag": "wardas.ngobrol",
+      "patterns": [
+        "Ayo berbicara denganku",
+        "Ayo mengobrol",
+        "Berbicara dengan saya",
+        "Ayo berbicara",
+        "Ngobrol yu"
+      ],
+      "responses": [
+        "Tentu!, ayo berbicara",
+        "Tentu!, ayo kita mengobrol"
       ]
     },
 
@@ -217,22 +274,9 @@
         "Robot kamu dimana?",
         "Dimanakah kamu?",
         "Berikan lokasi kamu",
-        "Tunjukkan Lokasi mu"
-
-      ],
-      "responses": [
-        "Saya berada di lokasi ini"
-      ]
-    },
-
-    {
-      "tag": "wardas.lokasi",
-      "patterns": [
-        "Kamu berada dimana?",
-        "Robot kamu dimana?",
-        "Dimanakah kamu?",
-        "Berikan lokasi kamu",
-        "Tunjukkan Lokasi mu"
+        "Tunjukkan Lokasi mu",
+        "Sedang dimana?",
+        "Lagi dimanakah kamu robot?"
 
       ],
       "responses": [
