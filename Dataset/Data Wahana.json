@@ -38,7 +38,10 @@
         "Umurmu",
         "Berapa umurmu",
         "Kapan kamu diciptakan",
-        "Beritahu aku kapan kamu ada"
+        "Beritahu aku kapan kamu ada",
+        "Beritahukan usiamu",
+        "Usiamu"
+
       ],
       "responses": [
         "Saya diciptakan baru baru ini",
@@ -97,7 +100,8 @@
         "Wardas, bantu aku sekarang",
         "Bisakah kamu membantu ku?",
         "Bantu aku sekarang",
-        "Aku butuh bantuanmu"
+        "Aku butuh bantuanmu",
+        "Bantu aku wardas"
       ],
       "responses": [
         "Baik, saya akan melakukan yang terbaik",
@@ -113,7 +117,8 @@
         "Apakah kamu memiliki hobi?",
         "Apa hobimu?",
         "Bagaimana dengan hobimu?",
-        "ceritakan tentang hobimu"
+        "ceritakan tentang hobimu",
+        "Beritahu aku hobimu"
       ],
       "responses": [
         "Hobi yaaa, Sejujurnya saya hanya melakukan hal untuk mengirimkan barang saja",
@@ -127,7 +132,8 @@
         "Apakah kamu siap?",
         "Apakah robot sudah siap?",
         "Apakah kamu sudah siap?",
-        "Ready?"
+        "Ready?",
+        "Siapkan dirimu"
       ],
       "responses": [
         "Tentu saja, saya siap",
@@ -155,7 +161,9 @@
       "patterns": [
         "Kamu benar",
         "Kamu mengatakan yang sebenarnya",
-        "Kamu [benar|pintar] dalam menjawab pertanyaan saya"
+        "Kamu [benar|pintar] dalam menjawab pertanyaan saya",
+        "Kamu hebat",
+        "Kamu menjawab dengan benar"
       ],
       "responses": [
         "Tentu saja, itu pekerjaan saya",
@@ -204,7 +212,8 @@
         "Selamat Siang Wardas",
         "Siang",
         "Selamat siang",
-        "Siang Wardas"
+        "Siang Wardas",
+        "Halo siang wardas"
       ],
       "responses": [
         "Selamat siang juga, Ada yang bisa saya bantu?",
@@ -218,7 +227,8 @@
         "Selamat pagi Wardas",
         "pagi",
         "Selamat pagi",
-        "pagi Wardas"
+        "pagi Wardas",
+        "Halo pagi wardas"
       ],
       "responses": [
         "Selamat pagi juga, Ada yang bisa saya bantu?",
@@ -232,7 +242,8 @@
         "Selamat sore Wardas",
         "sore",
         "Selamat sore",
-        "sore Wardas"
+        "sore Wardas",
+        "Halo sore wardas"
       ],
       "responses": [
         "Selamat sore juga, Ada yang bisa saya bantu?",
@@ -246,7 +257,8 @@
         "Selamat malam Wardas",
         "malam",
         "Selamat malam",
-        "malam Wardas"
+        "malam Wardas",
+        "Halo malam wardas"
       ],
       "responses": [
         "Selamat malam juga, Ada yang bisa saya bantu?",
@@ -259,7 +271,9 @@
       "patterns": [
         "kabarku baik, Tidak masalah",
         "Aku baik",
-        "Baik baik"
+        "Baik baik",
+        "Tidak ada masalah",
+        "Sangat baik"
       ],
       "responses": [
         "Senang mendengarnya",
@@ -290,7 +304,8 @@
         "Berapa suhu ruangan ini",
         "Suhu ruangan ini",
         "Beritahu suhu pada ruangan ini",
-        "Suhu saat ini"
+        "Suhu saat ini",
+        "Aku butuh suhu saat ini"
       ],
       "responses": [
         "Suhu tempat saya berada adalah"
@@ -303,7 +318,8 @@
         "Berapa Kelembapan ruangan ini",
         "Kelembapan ruangan ini",
         "Beritahu Kelembapan pada ruangan ini",
-        "Kelembapan saat ini"
+        "Kelembapan saat ini",
+        "Aku butuh kelembapan saat ini"
       ],
       "responses": [
         "Kelembapan tempat saya berada adalah"
