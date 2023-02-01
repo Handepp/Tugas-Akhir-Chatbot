@@ -21,26 +21,21 @@ import keyboard
 import warnings
 warnings.filterwarnings("ignore")
 
+
 def forward_150():
     forward_150 = arduino.write(str.encode('{"direction1":"forward","steps1":"30","speed1":"150","direction2":"forward","steps2":"30","speed2":"250"}'))
-
 
 def chatbot ():
     global max_idx
     chat = input("🧑 Kamu\t: ")       
-    prechat = text_preprocessing_process(chat)
- 
-    #tf_idf_vec = TfidfVectorizer(decode_error="replace", vocabulary=set(vocab))
-    tf_idf = TfidfVectorizer(ngram_range=(1,1))
-    tf_idf.fit(prechat)
-    tf = tf_idf.transform(prechat).toarray()
-    res = model.predict_proba(tf) 
-    #hasil = model.predict(tf_idf.fit_transform([prechat]))
-    #res = model.predict(tf_idf_vec.fit_transform([chat]))         # Prediksi vektor teks kedalam model machine learning
-    print(res)
-    #max_prob = max(res[0])                # Ambil nilai probabilitas & index lokasinya
-    #max_idx = np.argmax(res[0])
-    #print(f"Max Prob : {max_prob}\nMax Index: {max_idx}\nLabel: {model.classes_[max_idx]}")
+    chat = text_preprocessing_process(chat)
+    print(chat)
+    chat = vocab.transform([chat])
+    print(chat)
+    res = model.predict_proba(chat)
+    max_prob = max(res[0])                # Ambil nilai probabilitas & index lokasinya
+    max_idx = np.argmax(res[0])
+    print(f"Max Prob : {max_prob}\nMax Index: {max_idx}\nLabel: {model.classes_[max_idx]}")
 
 def response() :
     if(model.classes_[max_idx] == 'Wahana Maju'):
@@ -82,12 +77,12 @@ if __name__ == '__main__':
     #arduino = serial.Serial('COM3',115200)
     time.sleep(1)
 
-
-    vocab = pickle.load(open('Python/Model/Fitur_TFIDF.pickle', 'rb'))
+    tf_idf = TfidfVectorizer(ngram_range=(1,1))
+    vocab = pickle.load(open('Python/Model/Token_TFIDF1.pickle', 'rb'))
     model = load('Python/Model/DT_Wahana.model')
     
     while True:
-        print("tekan a untuk chat, tekan b untuk voice")
+        print("tekan a untuk chat, tekan b untuk voice, tekan q untuk quit")
         if keyboard.read_key()== "a":
             chatbot()
             response()  
@@ -95,6 +90,9 @@ if __name__ == '__main__':
         elif keyboard.read_key()== "b":
             voice()
             response()
+        
+        elif keyboard.read_key()== "q":
+            break
 
         else:
             print("Perintah tidak ada")
