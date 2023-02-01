@@ -5,6 +5,40 @@ from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import stopwords
 import pandas as pd
+import json
+
+# Package sentence tokenizer
+nltk.download('punkt') 
+# Package lemmatization
+nltk.download('wordnet')
+# Package multilingual wordnet data
+nltk.download('omw-1.4')
+
+# Importing the dataset
+with open('Dataset/Data Wahana.json') as content:
+  data1 = json.load(content)
+
+# Mendapatkan semua data ke dalam list
+tags = [] # data tag
+inputs = [] # data input atau pattern
+responses = {} # data respon
+words = [] # Data kata 
+classes = [] # Data Kelas atau Tag
+documents = [] # Data Kalimat Dokumen
+ignore_words = ['?', '!'] # Mengabaikan tanda spesial karakter
+
+for intent in data1['intents']:
+  responses[intent['tag']]=intent['responses']
+  for lines in intent['patterns']:
+    inputs.append(lines)
+    tags.append(intent['tag'])
+    for pattern in intent['patterns']:
+      w = nltk.word_tokenize(pattern)
+      words.extend(w)
+      documents.append((w, intent['tag']))
+      # add to our classes list
+      if intent['tag'] not in classes:
+        classes.append(intent['tag'])
 
 key_norm = pd.read_csv('Dataset/key_norm.csv')
 factory = StemmerFactory()
