@@ -1,23 +1,19 @@
 import pandas as pd
 import numpy as np
-import re
 import pickle
-import nltk
-import serial
 import time
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from fungsi import *
 from joblib import load
 import random
+import serial
 
 
 import speech_recognition as sr
 import pyttsx3
 import gtts
 import playsound
-import wikipedia
-import pywhatkit
 
 import keyboard
 
@@ -34,27 +30,25 @@ def speak(text):
     tts.save(filename)
     playsound.playsound(filename)
 
-def get_response(intent):
+"""def get_response(intent):
   respons = random.choice(responses[intent])
-  return respons
+  return respons"""
 
 def chatbot ():
-    global max_idx
-    chat = input("🧑 Kamu\t: ")       
-    chat = text_preprocessing_process(chat)
-    print(chat)
-    chat = vocab.transform([chat])
-    print(chat)
-    res = model.predict_proba(chat)
-    max_prob = max(res[0])                # Ambil nilai probabilitas & index lokasinya
+    global chat
+    chat = input("🧑 Kamu\t: ")
+    return chat       
+
+def response() :
+    prechat = text_preprocessing_process(chat)
+    vocabchat = vocab.transform([prechat])
+    res = model.predict_proba(vocabchat)
+    max_prob = max(res[0])                
     max_idx = np.argmax(res[0])
     print(f"Max Prob : {max_prob}\nMax Index: {max_idx}\nLabel: {model.classes_[max_idx]}")
     respons = random.choice(responses[model.classes_[max_idx]])
     print(respons)
     speak(respons)
-    #print(f"🤖 Bot\t: {get_response(model.classes_[max_idx])}")
-
-def response() :
     if(model.classes_[max_idx] == 'Wahana Maju'):
         #forward_150()
         print("Wahana Majuuu")
@@ -87,13 +81,11 @@ def voice ():
     return query
 
 
-
-
 if __name__ == '__main__':
     listener = sr.Recognizer()
     player = pyttsx3.init()
 
-    #arduino = serial.Serial('COM3',115200)
+    arduino = serial.Serial('COM3',115200)
     time.sleep(1)
 
     tf_idf = TfidfVectorizer(ngram_range=(1,1))

@@ -7,12 +7,12 @@ from nltk.corpus import stopwords
 import pandas as pd
 import json
 
-# Package sentence tokenizer
+"""# Package sentence tokenizer
 nltk.download('punkt') 
 # Package lemmatization
 nltk.download('wordnet')
 # Package multilingual wordnet data
-nltk.download('omw-1.4')
+nltk.download('omw-1.4')"""
 
 # Importing the dataset
 with open('Dataset/Data Wahana.json') as content:
