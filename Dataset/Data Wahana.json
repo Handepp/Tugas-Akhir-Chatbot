@@ -40,12 +40,17 @@
         "Kapan kamu diciptakan",
         "Beritahu aku kapan kamu ada",
         "Beritahukan usiamu",
-        "Usiamu"
+        "Usiamu",
+        "Diciptakan kapan",
+        "Robot ini dibuat kapan",
+        "Kapan kamu dibuat",
+        "Kapan dibuat"
 
       ],
       "responses": [
         "Saya diciptakan baru baru ini",
-        "Saya diciptakan pada tahun 2023"
+        "Saya diciptakan pada tahun 2023",
+        "Saya ada tidak lama ini"
       ]
     },
 
@@ -56,7 +61,13 @@
         "Kamu ini bodoh",
         "Kamu tidak berguna",
         "Kamu tidak dapat menjawab pertanyaan yang saya sampaikan",
-        "Kamu [tidak|kurang] pintar"
+        "Kamu [tidak|kurang] pintar",
+        "Kamu ini tidak dapat menjawab dengan benar",
+        "Kenapa kamu menjawab dengan salah",
+        "Kamu ini salah",
+        "Respon kamu ini salah",
+        "Kamu merespon dengan salah",
+        "Kamu menjawab dengan salah"
       ],
       "responses": [
         "Mohon maaf yang sebesar besarnya, pengembang saya akan terus melatih saya agar dapat menjadi lebih berguna",
@@ -71,11 +82,14 @@
         "Perbaiki dirimu agar lebih berguna",
         "Cobalah untuk menjadi lebih [pintar|baik]",
         "Kamu harus belajar",
-        "Berubahlah menjadi lebih baik"
+        "Berubahlah menjadi lebih baik",
+        "Semoga kamu dapat belajar dengan baik lagi",
+        "Kamu harus menjadi pintar"
       ],
       "responses": [
-        "Mohon maaf yang sebesar besarnya, pengembang saya akan terus melatih saya agar dapat menjadi lebih berguna",
-        "Maaf tuan, Saya akan terus belajar agar dapat berguna"
+        "Baik, saya akan meminta pengembang saya untuk melatih saya menjadi lebih baik",
+        "Siap laksanakan",
+        "Tentu saja, pengembang saya akan melatih saya menjadi lebih baik"
       ]
     },
 
@@ -194,10 +208,7 @@
         "Haloooo",
         "Hello",
         "Hai Wardas",
-        "Pagi",
-        "Siang",
-        "Sore",
-        "Malam"
+        "yoo wardas"
       ],
       "responses": [
         "Halo, Wardas disini, Ada yang bisa saya bantu?",
@@ -294,7 +305,10 @@
 
       ],
       "responses": [
-        "Saya berada di lokasi ini"
+        "Saya berada di lokasi ini",
+        "Saya ada disini",
+        "Sekarang saya disini",
+        "Saya disini"
       ]
     },
 
@@ -308,7 +322,10 @@
         "Aku butuh suhu saat ini"
       ],
       "responses": [
-        "Suhu tempat saya berada adalah"
+        "Suhu tempat saya berada adalah",
+        "Suhu sekarang adalah",
+        "Suhu disini adalah",
+        "Sekarang ruangan memiliki suhu sebesar"
       ]
     },
 
@@ -322,7 +339,10 @@
         "Aku butuh kelembapan saat ini"
       ],
       "responses": [
-        "Kelembapan tempat saya berada adalah"
+        "Kelembapan tempat saya berada adalah",
+        "Kelembapan disini adalah",
+        "Saat ini kelembapan adalah",
+        "Kelembapan saat ini adalah"
       ]
     },
 
@@ -358,6 +378,69 @@
         "Sampai jumpa lagi",
         "Dadah"
       ]
+    },
+
+    {
+      "tag": "wardas.jam",
+      "patterns": [
+        "Jam berapa sekarang",
+        "Beritahu aku waktu sekarang",
+        "Pukul berapa sekarang",
+        "Waktu saat ini",
+        "Jam saat ini",
+        "Saat ini jam berapa"
+      ],
+      "responses": [
+        "Pukul",
+        "Saat ini waktu menunjukkan pukul",
+        "Jam",
+        "Saat ini jam",
+        "Saat ini pukul",
+        ""
+      ]
+    },
+
+    {
+      "tag": "wardas.hari",
+      "patterns": [
+        "hari apa sekarang",
+        "hari ini hari apa",
+        "hari apa",
+        "sekarang hari apa",
+        "hari ini",
+        "beritahu hari apa ini",
+        "hari apakah ini",
+        ""
+      ],
+      "responses": [
+        "Hari",
+        "Sekarang hari",
+        "Hari ini adalah hari",
+        "Saat ini hari",
+        ""
+      ]
+    },
+
+    {
+      "tag": "wardas.tanggal",
+      "patterns": [
+        "Tanggal berapa sekarang",
+        "Sekarang tanggal berapa",
+        "Beritahu tanggal berapa sekarang",
+        "Tanggal berapa",
+        "Tanggal saat ini",
+        "Saya mau tanggal hari ini",
+        "Tanggal berapakah ini"
+      ],
+      "responses": [
+        "Sekarang tanggal",
+        "Tanggal",
+        "Saat ini tanggal",
+        "Tanggal saat ini adalah",
+        ""
+      ]
     }
+
+
   ]
 }
