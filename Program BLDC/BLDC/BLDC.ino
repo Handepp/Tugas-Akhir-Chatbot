@@ -1,7 +1,7 @@
 #include <ArduinoJson.h>
 #include <DHT.h>
-// GPIO mappings for Arduino Mega 2560
 
+// Inisialisasi port BLDC
 int m1_EL_Start_Stop=7;  //EL 
 int m1_Signal_hall=6;   // Signal - Hall sensor
 int m1_ZF_Direction=5;  // ZF 
@@ -12,8 +12,10 @@ int m2_Signal_hall=10;   // Signal - Hall sensor
 int m2_ZF_Direction=9;  // ZF 
 int m2_VR_speed=8;    //VR 
 
+// Inisialisasi port DHT11
 DHT dht(3, DHT11);
 
+// Define value variable 
 int pos1=0;
 int steps1=0;
 int speed1=0;
@@ -24,6 +26,7 @@ int speed2=0;
 
 String direction1; 
 String direction2;
+String chatbot;
 
 void plus1() {
   pos1++; //count steps
@@ -102,6 +105,22 @@ void drive(){
     pos2=0;    
   }
  }
+ 
+void dehate(){
+  // {"chatbot":"temp"}
+  // {"chatbot":"hum"}
+  if(chatbot =="temp")
+  {
+    float suhu = dht.readTemperature();
+    Serial.println(suhu);
+  }
+
+  if (chatbot == "hum")
+  {
+    float kelembapan = dht.readHumidity();
+    Serial.println(kelembapan);
+  }
+}
 
 
 void wheel1Stop(){
@@ -149,10 +168,11 @@ void wheel2MoveBackward(){
 }
 
 void loop() {
-  float suhu = dht.readTemperature();
-  float kelembapan = dht.readHumidity();
-  Serial.println(suhu);
-  Serial.println(kelembapan);
+  //float suhu = dht.readTemperature();
+  //float kelembapan = dht.readHumidity();
+  //float suhu = dht.readTemperature();
+  //Serial.println(suhu);
+  //Serial.println(kelembapan);
   delay(1000);
   if (Serial.available()>0) 
   {
@@ -160,18 +180,21 @@ void loop() {
     DynamicJsonBuffer jsonBuffer;
     JsonObject& root= jsonBuffer.parseObject(command);
     if (root.success()) {
+      chatbot = root["chatbot"].asString();
+      dehate();
+      
       direction1 = root["direction1"].asString();
-      Serial.println(direction1);
+      //Serial.println(direction1);
       direction2 = root["direction2"].asString();
-      Serial.println(direction2);
+      //Serial.println(direction2);
       steps1 = atoi(root["steps1"]); //atoi mengubah string menjadi nilai integer
-      Serial.println(steps1);
+      //Serial.println(steps1);
       steps2 = atoi(root["steps2"]); //atoi mengubah string menjadi nilai integer
-      Serial.println(steps2);
+      //Serial.println(steps2);
       speed1 = atoi(root["speed1"]);
-      Serial.println(speed1);
+      //Serial.println(speed1);
       speed2 = atoi(root["speed2"]);
-      Serial.println(speed2);
+      //Serial.println(speed2);
       drive();
       }
   }

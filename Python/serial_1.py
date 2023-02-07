@@ -1,14 +1,11 @@
-import pandas as pd
 import numpy as np
 import pickle
 import time
-from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from fungsi import *
 from joblib import load
 import random
 import serial
-
 
 import speech_recognition as sr
 import pyttsx3
@@ -20,26 +17,46 @@ import keyboard
 import warnings
 warnings.filterwarnings("ignore")
 
-
-def forward_150():
-    forward_150 = arduino.write(str.encode('{"direction1":"forward","steps1":"30","speed1":"150","direction2":"forward","steps2":"30","speed2":"250"}'))
+def Replace(value):
+    value1 = float(value)
+    value1 = round(value1,0)
+    value1 = int(value1)
+    value1 = str(value1)
+    return value1
 
 def speak(text):
     tts = gtts.gTTS(text=text, lang='id')
-    filename = "voice.mp3"
+    filename = "voice1.mp3"
     tts.save(filename)
     playsound.playsound(filename)
 
-"""def get_response(intent):
-  respons = random.choice(responses[intent])
-  return respons"""
-
 def chatbot ():
-    global chat
+    #global chat
     chat = input("🧑 Kamu\t: ")
-    return chat       
+    return chat
 
-def response() :
+def voice ():
+    r = sr.Recognizer()
+     
+    with sr.Microphone(device_index=1) as source:
+        r.adjust_for_ambient_noise(source)
+        print("Berbicara")
+        r.pause_threshold = 1
+        audio = r.listen(source)
+  
+    try:
+        print("Mengolah")   
+        query = r.recognize_google(audio, language ='id')
+        print("Kamu Berbicara: " + query)
+  
+    except Exception as e:
+        print(e)
+        print("Tidak dapat mendengar apapun") 
+        return "None"
+     
+    return query       
+
+def response(chat) :
     prechat = text_preprocessing_process(chat)
     vocabchat = vocab.transform([prechat])
     res = model.predict_proba(vocabchat)
@@ -47,39 +64,34 @@ def response() :
     max_idx = np.argmax(res[0])
     print(f"Max Prob : {max_prob}\nMax Index: {max_idx}\nLabel: {model.classes_[max_idx]}")
     respons = random.choice(responses[model.classes_[max_idx]])
-    print(respons)
-    speak(respons)
-    if(model.classes_[max_idx] == 'Wahana Maju'):
+    
+    #if(model.classes_[max_idx] == 'Wahana Maju'):
         #forward_150()
-        print("Wahana Majuuu")
-        time.sleep(1)
+        #print("Wahana Majuuu")
+        #time.sleep(1)
 
-    if(model.classes_[max_idx] == 'Wahana Berhenti'):
+    #if(model.classes_[max_idx] == 'Wahana Berhenti'):
         #stop_0()
-        print("Wahana Berhenti")
+        #print("Wahana Berhenti")
 
+    if(model.classes_[max_idx] == 'wardas.suhu'):
+        arduino.write(str.encode('{"chatbot":"temp"}'))
+        data = arduino.readline().decode("utf-8").strip('\n').strip('\r')
+        data = Replace(data)
+        print(data)
+        print(respons + " " + data + " " + "derajat celcius")
+        speak(respons + " " + data + " " + "derajat celcius")
 
-def voice ():
-    r = sr.Recognizer()
-     
-    with sr.Microphone(device_index=1) as source:
-        r.adjust_for_ambient_noise(source)
-        print("Now listening")
-        r.pause_threshold = 1
-        audio = r.listen(source)
-  
-    try:
-        print("Deciphering")   
-        query = r.recognize_google(audio, language ='id')
-        print("You Said: " + query)
-  
-    except Exception as e:
-        print(e)
-        print("Did not hear anything") 
-        return "None"
-     
-    return query
+    if(model.classes_[max_idx] == 'wardas.hump'):
+        arduino.write(str.encode('{"chatbot":"hump"}'))
+        data = arduino.readline().decode("utf-8").strip('\n').strip('\r')
+        data = Replace(data)
+        print(data)
+        print(respons + " " + data + " " + "RH")
+        speak(respons + " " + data + " " + "RH")
 
+    else:
+        speak(respons)
 
 if __name__ == '__main__':
     listener = sr.Recognizer()
@@ -95,12 +107,10 @@ if __name__ == '__main__':
     while True:
         print("tekan a untuk chat, tekan b untuk voice, tekan q untuk quit")
         if keyboard.read_key()== "a":
-            chatbot()
-            response()  
+            response(chatbot())  
         
         elif keyboard.read_key()== "b":
-            voice()
-            response()
+            response(voice())
         
         elif keyboard.read_key()== "q":
             break
