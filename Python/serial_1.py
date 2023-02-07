@@ -1,6 +1,7 @@
 import numpy as np
 import pickle
 import time
+from datetime import datetime
 from sklearn.feature_extraction.text import TfidfVectorizer
 from fungsi import *
 from joblib import load
@@ -26,7 +27,8 @@ def Replace(value):
 
 def speak(text):
     tts = gtts.gTTS(text=text, lang='id')
-    filename = "voice1.mp3"
+    date_string = datetime.now().strftime("%d%m%Y%H%M%S")
+    filename = "voice"+date_string+".mp3"
     tts.save(filename)
     playsound.playsound(filename)
 
