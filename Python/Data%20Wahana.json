@@ -7,6 +7,8 @@
         "Mohon maaf, saya belum mengerti."
       ]
     },
+    
+    
     {
       "tag": "Wardas.siapa",
       "patterns": [
@@ -438,6 +440,81 @@
         "Saat ini tanggal",
         "Tanggal saat ini adalah",
         ""
+      ]
+    },
+
+    {
+      "tag": "wardas.beban",
+      "patterns": [
+        "Berapa [beban|berat] yang dapat dibawa robot",
+        "Robot ini dapat membawa [beban|berat] hingga berapa ",
+        "Dapat membawa [beban|berat] berapa",
+        "maksimal [beban|berat] yang dapat dibawa",
+        "Kuat hingga membawa seberapa [beban|berat]",
+        "Jumlah [beban|berat] yang dapat dibawa",
+        "Kamu dapat membawa seberapa banyak [beban|berat]"
+      ],
+      "responses": [
+        "Saya dapat membawa [beban|berat] hingga kurang lebih 20 Kilogram",
+        "Kurang lebih 20 kilogram",
+        "Beban yang dapat dibawa oleh saya kurang lebih 20 kilogram"
+      ]
+    },
+
+    {
+      "tag": "wardas.slow",
+      "patterns": [
+        "Ubah kecepatan menjadi lambat",
+        "Lambatkan kecepatanmu",
+        "Menjadi lambatlah",
+        "Lambat saja",
+        "Kecepatan lambat",
+        "Berubah menjadi lambat"
+      ],
+      "responses": [
+        "Baik, saya akan melambat",
+        "Kecepatan menjadi lambat",
+        "Baik, laksanakan. Kecepatan menjadi lambat",
+        "Kecepatan diturunkan menjadi lambat",
+        "Kecepatan turun menjadi lambat"
+      ]
+    },
+
+    {
+      "tag": "wardas.medium",
+      "patterns": [
+        "Ubah kecepatan menjadi [sedang|medium]",
+        "[sedang|medium]kan kecepatanmu",
+        "Menjadi [sedang|medium]lah",
+        "[sedang|medium] saja",
+        "Kecepatan [sedang|medium]",
+        "Berubah menjadi [sedang|medium]"
+      ],
+      "responses": [
+        "Baik, kecepatan saya akan menjadi [sedang|medium]",
+        "Kecepatan menjadi [sedang|medium]",
+        "Baik, laksanakan. Kecepatan menjadi [sedang|medium]",
+        "Kecepatan diturunkan menjadi [sedang|medium]",
+        "Kecepatan turun menjadi [sedang|medium]"
+      ]
+    },
+
+    {
+      "tag": "wardas.fast",
+      "patterns": [
+        "Ubah kecepatan menjadi cepat",
+        "cepatkan kecepatanmu",
+        "Menjadi cepatlah",
+        "cepat saja",
+        "Kecepatan cepat",
+        "Berubah menjadi cepat"
+      ],
+      "responses": [
+        "Baik, kecepatan saya akan menjadi cepat",
+        "Kecepatan menjadi cepat",
+        "Baik, laksanakan. Kecepatan menjadi cepat",
+        "Kecepatan diturunkan menjadi cepat",
+        "Kecepatan turun menjadi cepat"
       ]
     }
 
