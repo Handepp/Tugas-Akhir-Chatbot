@@ -71,7 +71,6 @@ void setup() {
 
 
 void drive(){
-  // {"direction2":"forward","steps2":"30","speed2":"50"}
   // {"direction1":"forward","steps1":"30","speed1":"50","direction2":"forward","steps2":"30","speed2":"50"}
   // {"direction1":"backward","steps1":"30","speed1":"50","direction2":"backward","steps2":"30","speed2":"50"}
   // {"direction1":"stop","steps1":"0","speed1":"0","direction2":"stop","steps2":"0","speed2":"0"}--
@@ -105,10 +104,15 @@ void drive(){
     pos2=0;    
   }
  }
+
  
-void dehate(){
+void bot(){
   // {"chatbot":"temp"}
   // {"chatbot":"hum"}
+  // {"chatbot":"lambat"}
+  // {"chatbot":"sedang"}
+  // {"chatbot":"cepat"}
+  
   if(chatbot =="temp")
   {
     float suhu = dht.readTemperature();
@@ -119,6 +123,24 @@ void dehate(){
   {
     float kelembapan = dht.readHumidity();
     Serial.println(kelembapan);
+  }
+  
+  if (chatbot == "lambat")
+  {
+    analogWrite(m1_VR_speed, 75);
+    analogWrite(m2_VR_speed, 75);
+  }
+
+  if (chatbot == "sedang")
+  {
+    analogWrite(m1_VR_speed, 125);
+    analogWrite(m2_VR_speed, 125);
+  }
+
+  if (chatbot == "cepat")
+  {
+    analogWrite(m1_VR_speed, 200);
+    analogWrite(m2_VR_speed, 200);
   }
 }
 
@@ -180,21 +202,21 @@ void loop() {
     DynamicJsonBuffer jsonBuffer;
     JsonObject& root= jsonBuffer.parseObject(command);
     if (root.success()) {
-      chatbot = root["chatbot"].asString();
-      dehate();
-      
+      chatbot = root["chatbot"].asString(); 
+      bot();
+
       direction1 = root["direction1"].asString();
-      //Serial.println(direction1);
+      Serial.println(direction1);
       direction2 = root["direction2"].asString();
-      //Serial.println(direction2);
+      Serial.println(direction2);
       steps1 = atoi(root["steps1"]); //atoi mengubah string menjadi nilai integer
-      //Serial.println(steps1);
+      Serial.println(steps1);
       steps2 = atoi(root["steps2"]); //atoi mengubah string menjadi nilai integer
-      //Serial.println(steps2);
+      Serial.println(steps2);
       speed1 = atoi(root["speed1"]);
-      //Serial.println(speed1);
+      Serial.println(speed1);
       speed2 = atoi(root["speed2"]);
-      //Serial.println(speed2);
+      Serial.println(speed2);
       drive();
       }
   }
