@@ -516,6 +516,26 @@
         "Kecepatan diturunkan menjadi cepat",
         "Kecepatan turun menjadi cepat"
       ]
+    },
+
+    {
+      "tag": "wardas.Baterai",
+      "patterns": [
+        "Tunjukan dayamu",
+        "Baterai berapa persen lagi",
+        "Beritahu dayamu",
+        "Beritahu nilai baterai mu",
+        "Berapa lagi baterai yang kamu miliki",
+        "Jumlah kapasitas bateraimu",
+        "Berapa persen lagi baterai yang kamu punya"
+      ],
+      "responses": [
+        "",
+        "Saya memiliki baterai tersisa",
+        "Kapasitas baterai ada pada",
+        "Baterai tersisa ",
+        "Baterai saat ini tersisa"
+      ]
     }
 
 
