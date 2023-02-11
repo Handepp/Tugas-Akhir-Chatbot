@@ -1,22 +1,24 @@
-import re
-import nltk
-from sklearn.feature_extraction.text import TfidfVectorizer
-from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
-from nltk.tokenize import sent_tokenize, word_tokenize
-from nltk.corpus import stopwords
-import pandas as pd
 import json
+import nltk
+import time
+import random
+import string
+import pickle
+import numpy as np
+import pandas as pd
+import regex as re
 from sklearn.preprocessing import LabelEncoder
 
-"""# Package sentence tokenizer
+
+'''# Package sentence tokenizer
 nltk.download('punkt') 
 # Package lemmatization
 nltk.download('wordnet')
 # Package multilingual wordnet data
-nltk.download('omw-1.4')"""
+nltk.download('omw-1.4')'''
 
 # Importing the dataset
-with open('Dataset/Data Wahana.json') as content:
+with open('train/datasets.json') as content:
   data1 = json.load(content)
 
 # Mendapatkan semua data ke dalam list
@@ -41,38 +43,18 @@ for intent in data1['intents']:
       if intent['tag'] not in classes:
         classes.append(intent['tag'])
 
+# Konversi data json ke dalam dataframe
 data = pd.DataFrame({"patterns":inputs, "tags":tags})
 
 le = LabelEncoder()
 data['tags'] = le.fit_transform(data['tags'])
 
-key_norm = pd.read_csv('Dataset/key_norm.csv')
-factory = StemmerFactory()
-stemmer = factory.create_stemmer()
-# Fungsi untuk Membersihkan Text
-
-def casefolding(text):
+def text_preprocessing(text):
   text = text.lower()                               # Mengubah teks menjadi lower case
   text = re.sub(r'https?://\S+|www\.\S+', '', text) # Menghapus URL
   text = re.sub(r'[-+]?[0-9]+', '', text)           # Menghapus angka
   text = re.sub(r'[^\w\s]','', text)                # Menghapus karakter tanda baca
-  text = text.strip()
+  text = text.strip()                               # Menghapus whitespaces
   return text
 
-# Fungsi untuk Menormalisasi Text
-def text_normalize(text):
-  text = ' '.join([key_norm[key_norm['singkat'] == word]['hasil'].values[0] if (key_norm['singkat'] == word).any() else word for word in text.split()])
-  text = str.lower(text)
-  return text
-  
-# Fungsi untuk Melakukan Stemming (Bahasa Indonesia)
-def stemming(text):
-  text = stemmer.stem(text)
-  return text
-
-# Fungsi untuk Text Pre-Processing
-def text_preprocessing_process(text):
-  text = casefolding(text)
-  text = text_normalize(text)
-  text = stemming(text)
-  return text
+data['patterns'] = data['patterns'].apply(text_preprocessing)
