@@ -68,12 +68,12 @@ def response(chat) :
     print(f"Max Prob : {max_prob}\nMax Index: {max_idx}\nLabel: {model.classes_[max_idx]}")
     respons = random.choice(responses[model.classes_[max_idx]])
     
-    #if(model.classes_[max_idx] == 'Wahana Maju'):
+    if(model.classes_[max_idx] == 'Wahana Maju'):
         #forward_150()
         #print("Wahana Majuuu")
         #time.sleep(1)
 
-    #if(model.classes_[max_idx] == 'Wahana Berhenti'):
+    if(model.classes_[max_idx] == 'Wahana Berhenti'):
         #stop_0()
         #print("Wahana Berhenti")
 
