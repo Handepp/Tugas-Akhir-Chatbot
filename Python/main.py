@@ -109,14 +109,14 @@ def response(chat) :
     if(response_tag == 'wardas.jam'):
         print(respons + ' ' + get_time("%H %M") + ' ' + part)
 
-    if(response_tag == 'wardas.hari'):
+    elif(response_tag == 'wardas.hari'):
         print(respons + ' ' + get_time("%A")) 
 
-    if(response_tag == 'wardas.tanggal'):
+    elif(response_tag == 'wardas.tanggal'):
         print(respons + ' ' + get_time("%d %B %Y"))  
 
-    #else:
-        #print(respons)
+    else:
+        print(respons)
         #speak(respons)
 
 if __name__ == '__main__':
