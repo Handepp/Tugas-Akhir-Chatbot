@@ -175,7 +175,7 @@ void Forward(){
   digitalWrite(m2_EL_Start_Stop,LOW);
   delay(1000);
   digitalWrite(m1_ZF_Direction,LOW);
-  digitalWrite(m2_ZF_Direction,LOW);
+  digitalWrite(m2_ZF_Direction,HIGH);
   delay(1000);
   digitalWrite(m1_EL_Start_Stop,HIGH);
   digitalWrite(m2_EL_Start_Stop,HIGH);
@@ -189,7 +189,7 @@ void Backward(){
   digitalWrite(m2_EL_Start_Stop,LOW);
   delay(1000);
   digitalWrite(m1_ZF_Direction,HIGH);
-  digitalWrite(m2_ZF_Direction,HIGH);
+  digitalWrite(m2_ZF_Direction,LOW);
   delay(1000);
   digitalWrite(m1_EL_Start_Stop,HIGH);
   digitalWrite(m2_EL_Start_Stop,HIGH);
@@ -238,7 +238,7 @@ void loop() {
   //float suhu = dht.readTemperature();
   //Serial.println(suhu);
   //Serial.println(kelembapan);
-  delay(1000);
+  //delay(1000);
   if (Serial.available()>0) 
   {
     String command=Serial.readString();

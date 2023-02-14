@@ -81,14 +81,35 @@ def response(chat) :
     response_tag = le.inverse_transform([output])[0]
     respons = random.choice(responses[response_tag])
 
-    if(response_tag == 'Wahana Maju'):
-        #forward_150()
-        print("Wahana Majuuu")
-        #time.sleep(1)
+    if(response_tag == 'wardas.maju'):
+        arduino.write(str.encode('{"chatbot":"Maju"}'))
+        print(respons)
+        speak(respons)
+        time.sleep(1)
 
-    elif(response_tag == 'Wahana Berhenti'):
-        #stop_0()
-        print("Wahana Berhenti")
+    elif(response_tag == 'wardas.mundur'):
+        arduino.write(str.encode('{"chatbot":"Mundur"}'))
+        print(respons)
+        speak(respons)
+        time.sleep(1)
+
+    elif(response_tag == 'wardas.slow'):
+        arduino.write(str.encode('{"chatbot":"lambat"}'))
+        print(respons)
+        speak(respons)
+        time.sleep(1)
+
+    elif(response_tag == 'wardas.medium'):
+        arduino.write(str.encode('{"chatbot":"sedang"}'))
+        print(respons)
+        speak(respons)
+        time.sleep(1)
+
+    elif(response_tag == 'wardas.fast'):
+        arduino.write(str.encode('{"chatbot":"cepat"}'))
+        print(respons)
+        speak(respons)
+        time.sleep(1)
 
     elif(response_tag == 'wardas.suhu'):
         arduino.write(str.encode('{"chatbot":"temp"}'))
@@ -99,7 +120,7 @@ def response(chat) :
         speak(respons + " " + data + " " + "derajat celcius")
 
     elif(response_tag == 'wardas.hump'):
-        arduino.write(str.encode('{"chatbot":"hump"}'))
+        arduino.write(str.encode('{"chatbot":"hum"}'))
         data = arduino.readline().decode("utf-8").strip('\n').strip('\r')
         data = Replace(data)
         print(data)
@@ -108,16 +129,19 @@ def response(chat) :
 
     elif(response_tag == 'wardas.jam'):
         print(respons + ' ' + get_time("%H %M") + ' ' + part)
+        speak(respons + ' ' + get_time("%H %M") + ' ' + part)
 
     elif(response_tag == 'wardas.hari'):
-        print(respons + ' ' + get_time("%A")) 
+        print(respons + ' ' + get_time("%A"))
+        speak(respons + ' ' + get_time("%A")) 
 
     elif(response_tag == 'wardas.tanggal'):
-        print(respons + ' ' + get_time("%d %B %Y"))  
+        print(respons + ' ' + get_time("%d %B %Y"))
+        speak(respons + ' ' + get_time("%d %B %Y")) 
 
     else:
         print(respons)
-        #speak(respons)
+        speak(respons)
 
 if __name__ == '__main__':
     listener = sr.Recognizer()
@@ -132,7 +156,7 @@ if __name__ == '__main__':
     bert_tokenizer = BertTokenizer.from_pretrained(PRE_TRAINED_MODEL)
 
     # Load hasil fine-tuning
-    bert_load_model = TFBertForSequenceClassification.from_pretrained(PRE_TRAINED_MODEL, num_labels=30)
+    bert_load_model = TFBertForSequenceClassification.from_pretrained(PRE_TRAINED_MODEL, num_labels=32)
     bert_load_model.load_weights('Python/Model/bert-wardas.h5')
 
     
