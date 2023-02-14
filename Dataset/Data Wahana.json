@@ -538,6 +538,52 @@
         "Baterai tersisa ",
         "Baterai saat ini tersisa"
       ]
+    },
+
+    {
+      "tag": "wardas.maju",
+      "patterns": [
+        "Bergerak maju",
+        "maju jalan",
+        "maju",
+        "Maju ke depan",
+        "Majulah kedepan",
+        "Majuuuuuuuuuuuuuuuu",
+        "Maju maju maju maju",
+        "Majulah kedepan",
+        "Majulah"
+      ],
+      "responses": [
+        "Bergerak maju",
+        "Saya akan maju",
+        "Robot maju",
+        "Maju kedepan",
+        "Bergerak ke arah depan",
+        "Robot bergerak maju"
+      ]
+    },
+
+    {
+      "tag": "wardas.mundur",
+      "patterns": [
+        "Bergerak mundur",
+        "mundur jalan",
+        "mundur",
+        "mundur ke belakang",
+        "mundurlah kedepan",
+        "munduruuuuuuuuuuuuuuu",
+        "mundur mundur mundur mundur",
+        "mundurlah kedepan",
+        "mundurlah"
+      ],
+      "responses": [
+        "Bergerak mundur",
+        "Saya akan mundur",
+        "Robot mundur",
+        "mundur kedepan",
+        "Bergerak ke arah depan",
+        "Robot bergerak mundur"
+      ]
     }
 
   ]

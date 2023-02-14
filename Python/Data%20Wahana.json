@@ -179,7 +179,9 @@
         "Kamu mengatakan yang sebenarnya",
         "Kamu [benar|pintar] dalam menjawab pertanyaan saya",
         "Kamu hebat",
-        "Kamu menjawab dengan benar"
+        "Kamu menjawab dengan benar",
+        "Kamu pintar sekali",
+        "Kamu cukup pintar"
       ],
       "responses": [
         "Tentu saja, itu pekerjaan saya",
@@ -537,7 +539,6 @@
         "Baterai saat ini tersisa"
       ]
     }
-
 
   ]
 }

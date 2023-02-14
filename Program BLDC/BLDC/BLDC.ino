@@ -112,6 +112,19 @@ void bot(){
   // {"chatbot":"lambat"}
   // {"chatbot":"sedang"}
   // {"chatbot":"cepat"}
+  // {"chatbot":"Maju"}
+  // {"chatbot":"Mundur"}
+  // {"direction1":"forward","steps1":"30","speed1":"50","direction2":"forward","steps2":"30","speed2":"50"}
+
+  if(chatbot =="Maju")
+  {
+    Forward();
+  }
+
+  if(chatbot =="Mundur")
+  {
+    Backward();
+  }
   
   if(chatbot =="temp")
   {
@@ -152,6 +165,36 @@ void wheel1Stop(){
 void wheel2Stop(){
   digitalWrite(m2_EL_Start_Stop,LOW);
 }
+
+
+void Forward(){
+  analogWrite(m1_VR_speed, 125);
+  analogWrite(m2_VR_speed, 125);
+
+  digitalWrite(m1_EL_Start_Stop,LOW);
+  digitalWrite(m2_EL_Start_Stop,LOW);
+  delay(1000);
+  digitalWrite(m1_ZF_Direction,LOW);
+  digitalWrite(m2_ZF_Direction,LOW);
+  delay(1000);
+  digitalWrite(m1_EL_Start_Stop,HIGH);
+  digitalWrite(m2_EL_Start_Stop,HIGH);
+}
+
+void Backward(){
+  analogWrite(m1_VR_speed, 50);
+  analogWrite(m2_VR_speed, 50);
+
+  digitalWrite(m1_EL_Start_Stop,LOW);
+  digitalWrite(m2_EL_Start_Stop,LOW);
+  delay(1000);
+  digitalWrite(m1_ZF_Direction,HIGH);
+  digitalWrite(m2_ZF_Direction,HIGH);
+  delay(1000);
+  digitalWrite(m1_EL_Start_Stop,HIGH);
+  digitalWrite(m2_EL_Start_Stop,HIGH);
+}
+
 
 void wheel1MoveForward(){
   analogWrite(m1_VR_speed, speed1);

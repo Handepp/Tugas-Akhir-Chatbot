@@ -81,16 +81,16 @@ def response(chat) :
     response_tag = le.inverse_transform([output])[0]
     respons = random.choice(responses[response_tag])
 
-    '''#if(response_tag == 'Wahana Maju'):
+    if(response_tag == 'Wahana Maju'):
         #forward_150()
-        #print("Wahana Majuuu")
+        print("Wahana Majuuu")
         #time.sleep(1)
 
-    #if(response_tag == 'Wahana Berhenti'):
+    elif(response_tag == 'Wahana Berhenti'):
         #stop_0()
-        #print("Wahana Berhenti")
+        print("Wahana Berhenti")
 
-    if(response_tag == 'wardas.suhu'):
+    elif(response_tag == 'wardas.suhu'):
         arduino.write(str.encode('{"chatbot":"temp"}'))
         data = arduino.readline().decode("utf-8").strip('\n').strip('\r')
         data = Replace(data)
@@ -98,15 +98,15 @@ def response(chat) :
         print(respons + " " + data + " " + "derajat celcius")
         speak(respons + " " + data + " " + "derajat celcius")
 
-    if(response_tag == 'wardas.hump'):
+    elif(response_tag == 'wardas.hump'):
         arduino.write(str.encode('{"chatbot":"hump"}'))
         data = arduino.readline().decode("utf-8").strip('\n').strip('\r')
         data = Replace(data)
         print(data)
         print(respons + " " + data + " " + "RH")
-        speak(respons + " " + data + " " + "RH")'''
+        speak(respons + " " + data + " " + "RH")
 
-    if(response_tag == 'wardas.jam'):
+    elif(response_tag == 'wardas.jam'):
         print(respons + ' ' + get_time("%H %M") + ' ' + part)
 
     elif(response_tag == 'wardas.hari'):
@@ -123,7 +123,7 @@ if __name__ == '__main__':
     listener = sr.Recognizer()
     player = pyttsx3.init()
 
-    #arduino = serial.Serial('COM3',115200)
+    arduino = serial.Serial('COM3',115200)
 
     #Pretrained Model
     PRE_TRAINED_MODEL = 'indobenchmark/indobert-base-p2'
