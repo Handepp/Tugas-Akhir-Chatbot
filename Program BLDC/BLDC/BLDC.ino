@@ -31,7 +31,8 @@ String chatbot;
 void plus1() {
   pos1++; //count steps
   Serial.println(pos1);
-    if(pos1>=steps1){
+  if(pos1>=steps1)
+  {
     wheel1Stop();
     pos1=0;
   }
@@ -40,7 +41,8 @@ void plus1() {
 void plus2() {
   pos2++; //count steps
   Serial.println(pos2);
-    if(pos2>=steps2){
+  if(pos2>=steps2)
+  {
     wheel2Stop();
     pos2=0;
   }
@@ -61,9 +63,8 @@ void setup() {
   pinMode(m2_ZF_Direction, OUTPUT); //direction  - ZF 
 
   //Hall sensor detection - Count steps
-  attachInterrupt(digitalPinToInterrupt(m2_Signal_hall), plus2, CHANGE);
-  //Hall sensor detection - Count steps
   attachInterrupt(digitalPinToInterrupt(m1_Signal_hall), plus1, CHANGE);
+  attachInterrupt(digitalPinToInterrupt(m2_Signal_hall), plus2, CHANGE);
 
    dht.begin();
 
@@ -114,6 +115,7 @@ void bot(){
   // {"chatbot":"cepat"}
   // {"chatbot":"Maju"}
   // {"chatbot":"Mundur"}
+  // {"chatbot":"Stop"}
   // {"direction1":"forward","steps1":"30","speed1":"50","direction2":"forward","steps2":"30","speed2":"50"}
 
   if(chatbot =="Maju")
@@ -122,6 +124,11 @@ void bot(){
   }
 
   if(chatbot =="Mundur")
+  {
+    Backward();
+  }
+
+   if(chatbot =="Stop")
   {
     Backward();
   }
@@ -193,6 +200,11 @@ void Backward(){
   delay(1000);
   digitalWrite(m1_EL_Start_Stop,HIGH);
   digitalWrite(m2_EL_Start_Stop,HIGH);
+}
+
+void Stop(){
+  digitalWrite(m1_EL_Start_Stop,LOW);
+  digitalWrite(m2_EL_Start_Stop,LOW);
 }
 
 

@@ -93,6 +93,12 @@ def response(chat) :
         speak(respons)
         time.sleep(1)
 
+    elif(response_tag == 'wardas.stop'):
+        arduino.write(str.encode('{"chatbot":"Stop"}'))
+        print(respons)
+        speak(respons)
+        time.sleep(1)
+
     elif(response_tag == 'wardas.slow'):
         arduino.write(str.encode('{"chatbot":"lambat"}'))
         print(respons)
