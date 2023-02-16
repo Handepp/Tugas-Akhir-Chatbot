@@ -2,18 +2,38 @@
 #include <DHT.h>
 
 // Inisialisasi port BLDC
-int m1_EL_Start_Stop=7;  //EL 
-int m1_Signal_hall=6;   // Signal - Hall sensor
-int m1_ZF_Direction=5;  // ZF 
-int m1_VR_speed=4;    //VR 
+//int m1_EL_Start_Stop=7;  //EL 
+//int m1_Signal_hall=3;   // Signal - Hall sensor
+//int m1_ZF_Direction=5;  // ZF 
+//int m1_VR_speed=4;    //VR 
 
-int m2_EL_Start_Stop=11;  //EL 
-int m2_Signal_hall=10;   // Signal - Hall sensor
-int m2_ZF_Direction=9;  // ZF 
-int m2_VR_speed=8;    //VR 
+//int m2_EL_Start_Stop=11;  //EL 
+//int m2_Signal_hall=2;   // Signal - Hall sensor
+//int m2_ZF_Direction=9;  // ZF 
+//int m2_VR_speed=8;    //VR
+
+//int m1_EL_Start_Stop=11;  //EL 
+//int m1_Signal_hall=3;   // Signal - Hall sensor
+//int m1_ZF_Direction=9;  // ZF 
+//int m1_VR_speed=8;    //VR 
+
+//int m2_EL_Start_Stop=6;  //EL 
+//int m2_Signal_hall=2;   // Signal - Hall sensor
+//int m2_ZF_Direction=5;  // ZF 
+//int m2_VR_speed=4;    //VR
+
+int m1_EL_Start_Stop=8;  //EL 
+int m1_Signal_hall=3;   // Signal - Hall sensor
+int m1_ZF_Direction=10;  // ZF 
+int m1_VR_speed=11;    //VR 
+
+int m2_EL_Start_Stop=4;  //EL 
+int m2_Signal_hall=2;   // Signal - Hall sensor
+int m2_ZF_Direction=5;  // ZF 
+int m2_VR_speed=6;    //VR
 
 // Inisialisasi port DHT11
-DHT dht(3, DHT11);
+DHT dht(13, DHT11);
 
 // Define value variable 
 int pos1=0;
@@ -30,6 +50,7 @@ String chatbot;
 
 void plus1() {
   pos1++; //count steps
+  Serial.print("Pos 1 : ");
   Serial.println(pos1);
   if(pos1>=steps1)
   {
@@ -40,6 +61,7 @@ void plus1() {
 
 void plus2() {
   pos2++; //count steps
+  Serial.print("Pos 2 : ");
   Serial.println(pos2);
   if(pos2>=steps2)
   {
@@ -73,6 +95,7 @@ void setup() {
 
 void drive(){
   // {"direction1":"forward","steps1":"30","speed1":"50","direction2":"forward","steps2":"30","speed2":"50"}
+  // {"direction1":"forward","steps1":"2000","speed1":"100","direction2":"forward","steps2":"2000","speed2":"100"}
   // {"direction1":"backward","steps1":"30","speed1":"50","direction2":"backward","steps2":"30","speed2":"50"}
   // {"direction1":"stop","steps1":"0","speed1":"0","direction2":"stop","steps2":"0","speed2":"0"}--
   
@@ -118,7 +141,7 @@ void bot(){
   // {"chatbot":"Stop"}
   // {"direction1":"forward","steps1":"30","speed1":"50","direction2":"forward","steps2":"30","speed2":"50"}
 
-  if(chatbot =="Maju")
+  if(chatbot =="Maju" && steps1==0 && steps2==0)
   {
     Forward();
   }

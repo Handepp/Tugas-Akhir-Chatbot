@@ -63,7 +63,8 @@
         "Kamu ini bodoh",
         "Kamu tidak berguna",
         "Kamu tidak dapat menjawab pertanyaan yang saya sampaikan",
-        "Kamu [tidak|kurang] pintar",
+        "Kamu tidak pintar",
+        "Kamu kurang pintar",
         "Kamu ini tidak dapat menjawab dengan benar",
         "Kenapa kamu menjawab dengan salah",
         "Kamu ini salah",
@@ -140,7 +141,12 @@
         "Apa hobimu?",
         "Bagaimana dengan hobimu?",
         "ceritakan tentang hobimu",
-        "Beritahu aku hobimu"
+        "Beritahu aku hobimu",
+        "Hobimu itu apa?",
+        "Hobimu",
+        "Hobi",
+        "Hobby",
+        "Aku perlu mengetahui hobimu"
       ],
       "responses": [
         "Hobi yaaa, Sejujurnya saya hanya melakukan hal untuk mengirimkan barang saja",
@@ -155,7 +161,10 @@
         "Apakah robot sudah siap?",
         "Apakah kamu sudah siap?",
         "Ready?",
-        "Siapkan dirimu"
+        "Siapkan dirimu",
+        "Bersiaplah",
+        "Siap siap",
+        "Kau harus bersiap"
       ],
       "responses": [
         "Tentu saja, saya siap",
@@ -170,7 +179,11 @@
         "Kamu berasal dari mana?",
         "Dimana kamu dibuat?",
         "Dimana kamu diciptakan?",
-        "Robot ini diciptakan dimana?"
+        "Robot ini diciptakan dimana?",
+        "Berasal darimanakah robot ini",
+        "Kamu ini berasala dari mana",
+        "Kamu dibuat dari mana",
+        "Kamu dibuat dimana"
       ],
       "responses": [
         "Saya diciptakan di labolatorium Universitas Padjadjaran",
@@ -206,7 +219,11 @@
         "Ayo mengobrol",
         "Berbicara dengan saya",
         "Ayo berbicara",
-        "Ngobrol yu"
+        "Ngobrol yu",
+        "Mari berbicara",
+        "Ayo kita mengobrol",
+        "Waktunya untuk berbicara wardas",
+        "Saatnya kita berbicara"
       ],
       "responses": [
         "Tentu!, ayo berbicara",
@@ -222,7 +239,12 @@
         "Haloooo",
         "Hello",
         "Hai Wardas",
-        "yoo wardas"
+        "yoo wardas",
+        "Heyooo",
+        "Hallooo",
+        "Hei hei hei",
+        "Heiiiii",
+        "Woiiiii"
       ],
       "responses": [
         "Halo, Wardas disini, Ada yang bisa saya bantu?",
@@ -271,7 +293,7 @@
         "Halo sore wardas"
       ],
       "responses": [
-        "Selamat sore juga, Ada yang bisa saya bantu?",
+        "Selamat sore, Ada yang bisa saya bantu?",
         "sore, Ada yang bisa saya bantu?"
       ]
     },
@@ -286,7 +308,7 @@
         "Halo malam wardas"
       ],
       "responses": [
-        "Selamat malam juga, Ada yang bisa saya bantu?",
+        "Selamat malam, Ada yang bisa saya bantu?",
         "malam, Ada yang bisa saya bantu?"
       ]
     },
@@ -333,7 +355,11 @@
         "Suhu ruangan ini",
         "Beritahu suhu pada ruangan ini",
         "Suhu saat ini",
-        "Aku butuh suhu saat ini"
+        "Aku butuh suhu saat ini",
+        "Suhu sekarang",
+        "Sekarang suhunya berapa",
+        "Suhu untuk sekarang",
+        "Suhu"
       ],
       "responses": [
         "Suhu tempat saya berada adalah",
@@ -350,7 +376,11 @@
         "Kelembapan ruangan ini",
         "Beritahu Kelembapan pada ruangan ini",
         "Kelembapan saat ini",
-        "Aku butuh kelembapan saat ini"
+        "Aku butuh kelembapan saat ini",
+        "kelembapan sekarang",
+        "Sekarang kelembapannya berapa",
+        "kelembapan untuk sekarang",
+        "kelembapan"
       ],
       "responses": [
         "Kelembapan tempat saya berada adalah",
@@ -385,7 +415,8 @@
         "Dadah",
         "Sampai jumpa lagi",
         "Pergi dulu ya",
-        "Cabut dulu"
+        "Cabut dulu",
+        "Byee"
       ],
       "responses": [
         "Baik, hati-hati ya",

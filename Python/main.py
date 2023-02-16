@@ -85,13 +85,11 @@ def response(chat) :
         arduino.write(str.encode('{"chatbot":"Maju"}'))
         print(respons)
         speak(respons)
-        time.sleep(1)
 
     elif(response_tag == 'wardas.mundur'):
         arduino.write(str.encode('{"chatbot":"Mundur"}'))
         print(respons)
         speak(respons)
-        time.sleep(1)
 
     elif(response_tag == 'wardas.stop'):
         arduino.write(str.encode('{"chatbot":"Stop"}'))
