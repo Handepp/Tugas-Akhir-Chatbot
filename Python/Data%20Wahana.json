@@ -63,7 +63,8 @@
         "Kamu ini bodoh",
         "Kamu tidak berguna",
         "Kamu tidak dapat menjawab pertanyaan yang saya sampaikan",
-        "Kamu [tidak|kurang] pintar",
+        "Kamu tidak pintar",
+        "Kamu kurang pintar",
         "Kamu ini tidak dapat menjawab dengan benar",
         "Kenapa kamu menjawab dengan salah",
         "Kamu ini salah",
@@ -80,9 +81,11 @@
     {
       "tag": "wardas.insaf",
       "patterns": [
-        "Semoga kamu menjadi lebih [pintar|baik]",
+        "Semoga kamu menjadi lebih baik",
+        "Semoga kamu menjadi pintar",
         "Perbaiki dirimu agar lebih berguna",
-        "Cobalah untuk menjadi lebih [pintar|baik]",
+        "Cobalah untuk menjadi lebih baik",
+        "Cobalah untuk menjadi pintar",
         "Kamu harus belajar",
         "Berubahlah menjadi lebih baik",
         "Semoga kamu dapat belajar dengan baik lagi",
@@ -98,7 +101,9 @@
     {
       "tag": "wardas.bos",
       "patterns": [
-        "Siapa [pemilikmu|pengembangmu|bosmu]?",
+        "Siapa pemilikmu", 
+        "Siapa pengembangmu",
+        "Siapa bosmu?",
         "Siapa yang mengembangkanmu?",
         "Pemilikmu itu siapa?",
         "Kamu dikembangkan oleh siapa?",
@@ -117,7 +122,9 @@
         "Bisakah kamu membantu ku?",
         "Bantu aku sekarang",
         "Aku butuh bantuanmu",
-        "Bantu aku wardas"
+        "Bantu aku wardas",
+        "Tolong aku wardas",
+        "Tolong saya"
       ],
       "responses": [
         "Baik, saya akan melakukan yang terbaik",
@@ -134,7 +141,12 @@
         "Apa hobimu?",
         "Bagaimana dengan hobimu?",
         "ceritakan tentang hobimu",
-        "Beritahu aku hobimu"
+        "Beritahu aku hobimu",
+        "Hobimu itu apa?",
+        "Hobimu",
+        "Hobi",
+        "Hobby",
+        "Aku perlu mengetahui hobimu"
       ],
       "responses": [
         "Hobi yaaa, Sejujurnya saya hanya melakukan hal untuk mengirimkan barang saja",
@@ -149,7 +161,10 @@
         "Apakah robot sudah siap?",
         "Apakah kamu sudah siap?",
         "Ready?",
-        "Siapkan dirimu"
+        "Siapkan dirimu",
+        "Bersiaplah",
+        "Siap siap",
+        "Kau harus bersiap"
       ],
       "responses": [
         "Tentu saja, saya siap",
@@ -164,7 +179,11 @@
         "Kamu berasal dari mana?",
         "Dimana kamu dibuat?",
         "Dimana kamu diciptakan?",
-        "Robot ini diciptakan dimana?"
+        "Robot ini diciptakan dimana?",
+        "Berasal darimanakah robot ini",
+        "Kamu ini berasala dari mana",
+        "Kamu dibuat dari mana",
+        "Kamu dibuat dimana"
       ],
       "responses": [
         "Saya diciptakan di labolatorium Universitas Padjadjaran",
@@ -177,15 +196,19 @@
       "patterns": [
         "Kamu benar",
         "Kamu mengatakan yang sebenarnya",
-        "Kamu [benar|pintar] dalam menjawab pertanyaan saya",
+        "Kamu pintar dalam menjawab pertanyaan saya",
         "Kamu hebat",
         "Kamu menjawab dengan benar",
         "Kamu pintar sekali",
-        "Kamu cukup pintar"
+        "Kamu cukup pintar",
+        "Kamu hebat sekali",
+        "Cukup hebat untuk menjawab",
+        "Robot hebat dalam menjawab pertanyaan"
       ],
       "responses": [
         "Tentu saja, itu pekerjaan saya",
-        "Tentu saja"
+        "Tentu saja",
+        "Terimakasih"
       ]
     },
 
@@ -196,7 +219,11 @@
         "Ayo mengobrol",
         "Berbicara dengan saya",
         "Ayo berbicara",
-        "Ngobrol yu"
+        "Ngobrol yu",
+        "Mari berbicara",
+        "Ayo kita mengobrol",
+        "Waktunya untuk berbicara wardas",
+        "Saatnya kita berbicara"
       ],
       "responses": [
         "Tentu!, ayo berbicara",
@@ -212,7 +239,12 @@
         "Haloooo",
         "Hello",
         "Hai Wardas",
-        "yoo wardas"
+        "yoo wardas",
+        "Heyooo",
+        "Hallooo",
+        "Hei hei hei",
+        "Heiiiii",
+        "Woiiiii"
       ],
       "responses": [
         "Halo, Wardas disini, Ada yang bisa saya bantu?",
@@ -261,7 +293,7 @@
         "Halo sore wardas"
       ],
       "responses": [
-        "Selamat sore juga, Ada yang bisa saya bantu?",
+        "Selamat sore, Ada yang bisa saya bantu?",
         "sore, Ada yang bisa saya bantu?"
       ]
     },
@@ -276,7 +308,7 @@
         "Halo malam wardas"
       ],
       "responses": [
-        "Selamat malam juga, Ada yang bisa saya bantu?",
+        "Selamat malam, Ada yang bisa saya bantu?",
         "malam, Ada yang bisa saya bantu?"
       ]
     },
@@ -323,7 +355,11 @@
         "Suhu ruangan ini",
         "Beritahu suhu pada ruangan ini",
         "Suhu saat ini",
-        "Aku butuh suhu saat ini"
+        "Aku butuh suhu saat ini",
+        "Suhu sekarang",
+        "Sekarang suhunya berapa",
+        "Suhu untuk sekarang",
+        "Suhu"
       ],
       "responses": [
         "Suhu tempat saya berada adalah",
@@ -340,7 +376,11 @@
         "Kelembapan ruangan ini",
         "Beritahu Kelembapan pada ruangan ini",
         "Kelembapan saat ini",
-        "Aku butuh kelembapan saat ini"
+        "Aku butuh kelembapan saat ini",
+        "kelembapan sekarang",
+        "Sekarang kelembapannya berapa",
+        "kelembapan untuk sekarang",
+        "kelembapan"
       ],
       "responses": [
         "Kelembapan tempat saya berada adalah",
@@ -375,7 +415,8 @@
         "Dadah",
         "Sampai jumpa lagi",
         "Pergi dulu ya",
-        "Cabut dulu"
+        "Cabut dulu",
+        "Byee"
       ],
       "responses": [
         "Baik, hati-hati ya",
@@ -399,8 +440,7 @@
         "Saat ini waktu menunjukkan pukul",
         "Jam",
         "Saat ini jam",
-        "Saat ini pukul",
-        ""
+        "Saat ini pukul"
       ]
     },
 
@@ -413,15 +453,13 @@
         "sekarang hari apa",
         "hari ini",
         "beritahu hari apa ini",
-        "hari apakah ini",
-        ""
+        "hari apakah ini"
       ],
       "responses": [
         "Hari",
         "Sekarang hari",
         "Hari ini adalah hari",
-        "Saat ini hari",
-        ""
+        "Saat ini hari"
       ]
     },
 
@@ -440,8 +478,7 @@
         "Sekarang tanggal",
         "Tanggal",
         "Saat ini tanggal",
-        "Tanggal saat ini adalah",
-        ""
+        "Tanggal saat ini adalah"
       ]
     },
 
@@ -457,7 +494,7 @@
         "Kamu dapat membawa seberapa banyak [beban|berat]"
       ],
       "responses": [
-        "Saya dapat membawa [beban|berat] hingga kurang lebih 20 Kilogram",
+        "Saya dapat membawa beban hingga kurang lebih 20 Kilogram",
         "Kurang lebih 20 kilogram",
         "Beban yang dapat dibawa oleh saya kurang lebih 20 kilogram"
       ]
@@ -471,7 +508,8 @@
         "Menjadi lambatlah",
         "Lambat saja",
         "Kecepatan lambat",
-        "Berubah menjadi lambat"
+        "Berubah menjadi lambat",
+        "Turunkan kecepatan menjadi lambat"
       ],
       "responses": [
         "Baik, saya akan melambat",
@@ -490,14 +528,16 @@
         "Menjadi [sedang|medium]lah",
         "[sedang|medium] saja",
         "Kecepatan [sedang|medium]",
-        "Berubah menjadi [sedang|medium]"
+        "Berubah menjadi [sedang|medium]",
+        "Ubah kecepatan menjadi medium"
       ],
       "responses": [
-        "Baik, kecepatan saya akan menjadi [sedang|medium]",
-        "Kecepatan menjadi [sedang|medium]",
-        "Baik, laksanakan. Kecepatan menjadi [sedang|medium]",
-        "Kecepatan diturunkan menjadi [sedang|medium]",
-        "Kecepatan turun menjadi [sedang|medium]"
+        "Baik, kecepatan saya akan menjadi medium",
+        "Kecepatan menjadi medium",
+        "Baik, laksanakan. Kecepatan menjadi medium",
+        "Kecepatan diturunkan menjadi medium",
+        "Kecepatan turun menjadi medium"
+        
       ]
     },
 
@@ -509,14 +549,15 @@
         "Menjadi cepatlah",
         "cepat saja",
         "Kecepatan cepat",
-        "Berubah menjadi cepat"
+        "Berubah menjadi cepat",
+        "Naikkan kecepatan menjadi cepat"
       ],
       "responses": [
         "Baik, kecepatan saya akan menjadi cepat",
         "Kecepatan menjadi cepat",
         "Baik, laksanakan. Kecepatan menjadi cepat",
         "Kecepatan diturunkan menjadi cepat",
-        "Kecepatan turun menjadi cepat"
+        "Kecepatan dinaikkan menjadi cepat"
       ]
     },
 
@@ -583,6 +624,30 @@
         "mundur kedepan",
         "Bergerak ke arah depan",
         "Robot bergerak mundur"
+      ]
+    },
+
+    {
+      "tag": "wardas.stop",
+      "patterns": [
+        "Berhenti",
+        "Berhenti Bergerak",
+        "Stop",
+        "Cukup sampai disini",
+        "Berhenti untuk saat ini",
+        "Robot berhenti",
+        "Wardas berhenti",
+        "Diam",
+        "Cukup diam",
+        "Jangan bergerak"
+      ],
+      "responses": [
+        "Stop",
+        "Saya berhenti",
+        "Saya akan berhenti",
+        "Baik, Saya berhenti",
+        "Baiklah",
+        "Baik"
       ]
     }
   ]

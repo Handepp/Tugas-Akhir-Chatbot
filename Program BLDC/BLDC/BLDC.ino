@@ -57,6 +57,7 @@ void plus1() {
     wheel1Stop();
     pos1=0;
   }
+  else
 }
 
 void plus2() {
@@ -136,12 +137,12 @@ void bot(){
   // {"chatbot":"lambat"}
   // {"chatbot":"sedang"}
   // {"chatbot":"cepat"}
-  // {"chatbot":"Maju"}
+  // {"chatbot":"Maju","steps1":"2000","steps2":"2000"}
   // {"chatbot":"Mundur"}
   // {"chatbot":"Stop"}
   // {"direction1":"forward","steps1":"30","speed1":"50","direction2":"forward","steps2":"30","speed2":"50"}
 
-  if(chatbot =="Maju" && steps1==0 && steps2==0)
+  if(chatbot =="Maju")
   {
     Forward();
   }
