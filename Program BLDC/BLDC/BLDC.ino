@@ -113,20 +113,6 @@ void drive(){
     pos2=0;
     Forward(50,100);
   }
-  
-  /*if (direction2=="forward" && pos2<steps2)
-  {
-    wheel2MoveForward();
-  }*/
-  
-  else if(direction1=="stop" && direction2=="stop")
-  {
-    Serial.println("Wheel 1 & 2 Stop");
-    wheel1Stop();
-    pos1=0;
-    wheel2Stop();
-    pos2=0;    
-  }
  }
 
  
@@ -139,7 +125,6 @@ void bot(){
   // {"chatbot":"Maju"}
   // {"chatbot":"Mundur"}
   // {"chatbot":"Stop"}
-  // {"direction1":"forward","steps1":"30","speed1":"50","direction2":"forward","steps2":"30","speed2":"50"}
 
   if(chatbot =="Maju")
   {
@@ -153,8 +138,7 @@ void bot(){
 
    if(chatbot =="Stop")
   {
-    wheel1Stop();
-    wheel2Stop();
+    Stop();
   }
   
   if(chatbot =="temp")

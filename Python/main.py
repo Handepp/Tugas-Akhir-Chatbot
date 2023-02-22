@@ -40,6 +40,11 @@ def speak(text):
     tts.save(filename)
     playsound.playsound(filename)
 
+def speak_1(text):
+    engine = pyttsx3.init();
+    engine.say("I will speak this text");
+    engine.runAndWait() 
+
 def chatbot ():
     #global chat
     chat = input("🧑 Kamu\t: ")
@@ -114,6 +119,16 @@ def response(chat) :
         print(respons)
         speak(respons)
         time.sleep(1)
+    
+    elif(response_tag == 'SaVi.kanan'):
+        arduino.write(str.encode('{"mode":"hall", "direct":"right"}'))
+        print(respons)
+        speak(respons)
+
+    elif(response_tag == 'SaVi.kiri'):
+        arduino.write(str.encode('{"mode":"hall", "direct":"left"}'))
+        print(respons)
+        speak(respons)
 
     elif(response_tag == 'SaVi.suhu'):
         arduino.write(str.encode('{"chatbot":"temp"}'))
@@ -160,7 +175,7 @@ if __name__ == '__main__':
     bert_tokenizer = BertTokenizer.from_pretrained(PRE_TRAINED_MODEL)
 
     # Load hasil fine-tuning
-    bert_load_model = TFBertForSequenceClassification.from_pretrained(PRE_TRAINED_MODEL, num_labels=32)
+    bert_load_model = TFBertForSequenceClassification.from_pretrained(PRE_TRAINED_MODEL, num_labels=35)
     bert_load_model.load_weights('Python/Model/bert-SaVi.h5')
 
     

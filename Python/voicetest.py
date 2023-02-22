@@ -1,16 +1,24 @@
-import speech_recognition as sr
 import pyttsx3
-import wikipedia
-import pywhatkit
 
-listener = sr.Recognizer()
-player = pyttsx3.init()
+engine = pyttsx3.init()
+voices = engine.getProperty('voices')
+engine.setProperty('voice', voices[2].id)
+# print(voices[1].id)
+engine.setProperty('rate', 150)
+# engine.say("Hello, How are you ?")
+voices = engine.getProperty('voices')
+for voice in voices:
+    print("Voice: %s" % voice.name)
+    print(" - ID: %s" % voice.id)
+    print(" - Languages: %s" % voice.languages)
+    print(" - Gender: %s" % voice.gender)
+    print(" - Age: %s" % voice.age)
+    print("\n")
+engine.runAndWait()
 
-with sr.Microphone() as input_device:
-    print("I am ready, Listening ....")
-    voice_content = listener.listen(input_device)
-    text_command = listener.recognize_google(voice_content, language= 'id')
-    text_command = text_command.lower()
-    print(text_command)
 
+def speak(str):
+    engine.say(str)
+    engine.runAndWait()
 
+speak("Ara ara")

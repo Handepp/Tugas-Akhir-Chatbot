@@ -16,7 +16,7 @@ nltk.download('wordnet')
 nltk.download('omw-1.4')"""
 
 # Importing the dataset
-with open('Dataset/Data Wahana.json') as content:
+with open('Dataset/Data_Wahana.json') as content:
   data1 = json.load(content)
 
 # Mendapatkan semua data ke dalam list
