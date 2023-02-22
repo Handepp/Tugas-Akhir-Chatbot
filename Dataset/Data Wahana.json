@@ -649,6 +649,54 @@
         "Baiklah",
         "Baik"
       ]
+    },
+
+    {
+      "tag": "wardas.kanan",
+      "patterns": [
+        "Belok ke kanan",
+        "Berbelok lah ke kanan",
+        "Belok kanan",
+        "Hadap kanan",
+        "Belok menuju arah kanan",
+        "Belok ke arah kanan",
+        "Kanan kanan kanan",
+        "Ke kanan",
+        "Lihat ke kanan",
+        "Menatap ke kanan"
+      ],
+      "responses": [
+        "Belok kanan",
+        "Saya ke kanan",
+        "Baik",
+        "Ke kanan",
+        "Baiklah",
+        "Okay"
+      ]
+    },
+
+    {
+      "tag": "wardas.kiri",
+      "patterns": [
+        "Belok ke kiri",
+        "Berbelok lah ke kiri",
+        "Belok kiri",
+        "Hadap kiri",
+        "Belok menuju arah kiri",
+        "Belok ke arah kiri",
+        "kiri kiri kiri",
+        "Ke kiri",
+        "Lihat ke kiri",
+        "Menatap ke kiri"
+      ],
+      "responses": [
+        "Belok kiri",
+        "Saya ke kiri",
+        "Baik",
+        "Ke kiri",
+        "Baiklah",
+        "Okay"
+      ]
     }
   ]
 }
