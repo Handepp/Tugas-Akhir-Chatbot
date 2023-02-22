@@ -10,7 +10,7 @@
     
     
     {
-      "tag": "Wardas.siapa",
+      "tag": "SaVi.siapa",
       "patterns": [
         "Siapa kamu?",
         "Kamu siapa?",
@@ -23,19 +23,19 @@
         "Kamu berguna untuk apa?",
         "Kamu itu apa?",
         "Jelasan diri kamu?",
-        "Wardas itu untuk apa?",
+        "SaVi itu untuk apa?",
         "Katakan tentang anda",
         "Ceritakan tentang anda",
         "Bicara tentang dirimu"
       ],
       "responses": [
-        "Hai, saya adalah wardas, Wahana Cerdas. Saya adalah wahana untuk mengirimkan barang secara otonom",
-        "Saya adalah Wardas, Wahana Cerdas. Saya berguna untuk mengirimkan barang secara otonom"
+        "Hai, saya adalah SaVi, Wahana Cerdas. Saya adalah wahana untuk mengirimkan barang secara otonom",
+        "Saya adalah SaVi, Wahana Cerdas. Saya berguna untuk mengirimkan barang secara otonom"
       ]
     },
 
     {
-      "tag": "wardas.usia",
+      "tag": "SaVi.usia",
       "patterns": [
         "Umurmu",
         "Berapa umurmu",
@@ -57,7 +57,7 @@
     },
 
     {
-      "tag": "wardas.buruk",
+      "tag": "SaVi.buruk",
       "patterns": [
         "Robot bodoh",
         "Kamu ini bodoh",
@@ -79,7 +79,7 @@
     },
 
     {
-      "tag": "wardas.insaf",
+      "tag": "SaVi.insaf",
       "patterns": [
         "Semoga kamu menjadi lebih baik",
         "Semoga kamu menjadi pintar",
@@ -99,7 +99,7 @@
     },
 
     {
-      "tag": "wardas.bos",
+      "tag": "SaVi.bos",
       "patterns": [
         "Siapa pemilikmu", 
         "Siapa pengembangmu",
@@ -116,14 +116,14 @@
     },
 
     {
-      "tag": "wardas.bantu",
+      "tag": "SaVi.bantu",
       "patterns": [
-        "Wardas, bantu aku sekarang",
+        "SaVi, bantu aku sekarang",
         "Bisakah kamu membantu ku?",
         "Bantu aku sekarang",
         "Aku butuh bantuanmu",
-        "Bantu aku wardas",
-        "Tolong aku wardas",
+        "Bantu aku SaVi",
+        "Tolong aku SaVi",
         "Tolong saya"
       ],
       "responses": [
@@ -135,7 +135,7 @@
     },
 
     {
-      "tag": "wardas.hobby",
+      "tag": "SaVi.hobby",
       "patterns": [
         "Apakah kamu memiliki hobi?",
         "Apa hobimu?",
@@ -155,7 +155,7 @@
     },
 
     {
-      "tag": "wardas.siap",
+      "tag": "SaVi.siap",
       "patterns": [
         "Apakah kamu siap?",
         "Apakah robot sudah siap?",
@@ -173,7 +173,7 @@
     },
 
     {
-      "tag": "wardas.asal",
+      "tag": "SaVi.asal",
       "patterns": [
         "Darimana asalmu?",
         "Kamu berasal dari mana?",
@@ -192,7 +192,7 @@
     },
 
     {
-      "tag": "wardas.benar",
+      "tag": "SaVi.benar",
       "patterns": [
         "Kamu benar",
         "Kamu mengatakan yang sebenarnya",
@@ -213,7 +213,7 @@
     },
 
     {
-      "tag": "wardas.ngobrol",
+      "tag": "SaVi.ngobrol",
       "patterns": [
         "Ayo berbicara denganku",
         "Ayo mengobrol",
@@ -222,7 +222,7 @@
         "Ngobrol yu",
         "Mari berbicara",
         "Ayo kita mengobrol",
-        "Waktunya untuk berbicara wardas",
+        "Waktunya untuk berbicara SaVi",
         "Saatnya kita berbicara"
       ],
       "responses": [
@@ -232,14 +232,14 @@
     },
 
     {
-      "tag": "wardas.sapa",
+      "tag": "SaVi.sapa",
       "patterns": [
-        "Halo wardas!",
+        "Halo SaVi!",
         "Haiiii",
         "Haloooo",
         "Hello",
-        "Hai Wardas",
-        "yoo wardas",
+        "Hai SaVi",
+        "yoo SaVi",
         "Heyooo",
         "Hallooo",
         "Hei hei hei",
@@ -247,20 +247,20 @@
         "Woiiiii"
       ],
       "responses": [
-        "Halo, Wardas disini, Ada yang bisa saya bantu?",
-        "Hai, Wardas disini",
-        "Hai juga, Ada yang bisa Wardas bantu?"
+        "Halo, SaVi disini, Ada yang bisa saya bantu?",
+        "Hai, SaVi disini",
+        "Hai juga, Ada yang bisa SaVi bantu?"
       ]
     },
 
     {
-      "tag": "wardas.siang",
+      "tag": "SaVi.siang",
       "patterns": [
-        "Selamat Siang Wardas",
+        "Selamat Siang SaVi",
         "Siang",
         "Selamat siang",
-        "Siang Wardas",
-        "Halo siang wardas"
+        "Siang SaVi",
+        "Halo siang SaVi"
       ],
       "responses": [
         "Selamat siang juga, Ada yang bisa saya bantu?",
@@ -269,13 +269,13 @@
     },
 
     {
-      "tag": "wardas.pagi",
+      "tag": "SaVi.pagi",
       "patterns": [
-        "Selamat pagi Wardas",
+        "Selamat pagi SaVi",
         "pagi",
         "Selamat pagi",
-        "pagi Wardas",
-        "Halo pagi wardas"
+        "pagi SaVi",
+        "Halo pagi SaVi"
       ],
       "responses": [
         "Selamat pagi juga, Ada yang bisa saya bantu?",
@@ -284,13 +284,13 @@
     },
 
     {
-      "tag": "wardas.sore",
+      "tag": "SaVi.sore",
       "patterns": [
-        "Selamat sore Wardas",
+        "Selamat sore SaVi",
         "sore",
         "Selamat sore",
-        "sore Wardas",
-        "Halo sore wardas"
+        "sore SaVi",
+        "Halo sore SaVi"
       ],
       "responses": [
         "Selamat sore, Ada yang bisa saya bantu?",
@@ -299,13 +299,13 @@
     },
 
     {
-      "tag": "wardas.malam",
+      "tag": "SaVi.malam",
       "patterns": [
-        "Selamat malam Wardas",
+        "Selamat malam SaVi",
         "malam",
         "Selamat malam",
-        "malam Wardas",
-        "Halo malam wardas"
+        "malam SaVi",
+        "Halo malam SaVi"
       ],
       "responses": [
         "Selamat malam, Ada yang bisa saya bantu?",
@@ -314,7 +314,7 @@
     },
 
     {
-      "tag": "wardas.baik",
+      "tag": "SaVi.baik",
       "patterns": [
         "kabarku baik, Tidak masalah",
         "Aku baik",
@@ -329,7 +329,7 @@
     },
 
     {
-      "tag": "wardas.lokasi",
+      "tag": "SaVi.lokasi",
       "patterns": [
         "Kamu berada dimana?",
         "Robot kamu dimana?",
@@ -349,7 +349,7 @@
     },
 
     {
-      "tag": "wardas.suhu",
+      "tag": "SaVi.suhu",
       "patterns": [
         "Berapa suhu ruangan ini",
         "Suhu ruangan ini",
@@ -370,7 +370,7 @@
     },
 
     {
-      "tag": "wardas.hump",
+      "tag": "SaVi.hump",
       "patterns": [
         "Berapa Kelembapan ruangan ini",
         "Kelembapan ruangan ini",
@@ -391,11 +391,11 @@
     },
 
     {
-      "tag": "wardas.terimakasih",
+      "tag": "SaVi.terimakasih",
       "patterns": [
         "Makasih",
         "Terima Kasih",
-        "Makasih Wardas",
+        "Makasih SaVi",
         "Thanks",
         "Thank you",
         "Tengkyu",
@@ -409,7 +409,7 @@
     },
 
     {
-      "tag": "wardas.berpisah",
+      "tag": "SaVi.berpisah",
       "patterns": [
         "Selamat tinggal",
         "Dadah",
@@ -426,7 +426,7 @@
     },
 
     {
-      "tag": "wardas.jam",
+      "tag": "SaVi.jam",
       "patterns": [
         "Jam berapa sekarang",
         "Beritahu aku waktu sekarang",
@@ -445,7 +445,7 @@
     },
 
     {
-      "tag": "wardas.hari",
+      "tag": "SaVi.hari",
       "patterns": [
         "hari apa sekarang",
         "hari ini hari apa",
@@ -464,7 +464,7 @@
     },
 
     {
-      "tag": "wardas.tanggal",
+      "tag": "SaVi.tanggal",
       "patterns": [
         "Tanggal berapa sekarang",
         "Sekarang tanggal berapa",
@@ -483,7 +483,7 @@
     },
 
     {
-      "tag": "wardas.beban",
+      "tag": "SaVi.beban",
       "patterns": [
         "Berapa [beban|berat] yang dapat dibawa robot",
         "Robot ini dapat membawa [beban|berat] hingga berapa ",
@@ -501,7 +501,7 @@
     },
 
     {
-      "tag": "wardas.slow",
+      "tag": "SaVi.slow",
       "patterns": [
         "Ubah kecepatan menjadi lambat",
         "Lambatkan kecepatanmu",
@@ -521,7 +521,7 @@
     },
 
     {
-      "tag": "wardas.medium",
+      "tag": "SaVi.medium",
       "patterns": [
         "Ubah kecepatan menjadi [sedang|medium]",
         "[sedang|medium]kan kecepatanmu",
@@ -542,7 +542,7 @@
     },
 
     {
-      "tag": "wardas.fast",
+      "tag": "SaVi.fast",
       "patterns": [
         "Ubah kecepatan menjadi cepat",
         "cepatkan kecepatanmu",
@@ -562,7 +562,7 @@
     },
 
     {
-      "tag": "wardas.Baterai",
+      "tag": "SaVi.Baterai",
       "patterns": [
         "Tunjukan dayamu",
         "Baterai berapa persen lagi",
@@ -582,7 +582,7 @@
     },
 
     {
-      "tag": "wardas.maju",
+      "tag": "SaVi.maju",
       "patterns": [
         "Bergerak maju",
         "maju jalan",
@@ -605,7 +605,7 @@
     },
 
     {
-      "tag": "wardas.mundur",
+      "tag": "SaVi.mundur",
       "patterns": [
         "Bergerak mundur",
         "mundur jalan",
@@ -628,7 +628,7 @@
     },
 
     {
-      "tag": "wardas.stop",
+      "tag": "SaVi.stop",
       "patterns": [
         "Berhenti",
         "Berhenti Bergerak",
@@ -636,7 +636,7 @@
         "Cukup sampai disini",
         "Berhenti untuk saat ini",
         "Robot berhenti",
-        "Wardas berhenti",
+        "SaVi berhenti",
         "Diam",
         "Cukup diam",
         "Jangan bergerak"
@@ -652,7 +652,7 @@
     },
 
     {
-      "tag": "wardas.kanan",
+      "tag": "SaVi.kanan",
       "patterns": [
         "Belok ke kanan",
         "Berbelok lah ke kanan",
@@ -676,7 +676,7 @@
     },
 
     {
-      "tag": "wardas.kiri",
+      "tag": "SaVi.kiri",
       "patterns": [
         "Belok ke kiri",
         "Berbelok lah ke kiri",
