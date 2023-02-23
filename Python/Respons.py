@@ -1,66 +1,7 @@
-import numpy as np
-import time
-from datetime import datetime
-from sklearn.preprocessing import LabelEncoder
-import tensorflow as tf
-from transformers import BertTokenizer
-from transformers import TFBertForSequenceClassification
-
-from keras.models import load_model
-import random
-import serial
-
-import speech_recognition as sr
-import pyttsx3
-
-import keyboard
 
 from fungsi import *
-from Waktu import *
-
-import warnings
-warnings.filterwarnings("ignore")
-
-def Replace(value):
-    value1 = float(value)
-    value1 = round(value1,0)
-    value1 = int(value1)
-    value1 = str(value1)
-    return value1
-    
-def speak(text):
-    engine = pyttsx3.init()
-    voices = engine.getProperty('voices')
-    engine.setProperty('voice', voices[1].id)
-    engine.setProperty('rate', 175)
-    engine.say(text)
-    engine.runAndWait()
-
-def chatbot ():
-    #global chat
-    chat = input("🧑 Kamu\t: ")
-    return chat
-
-def voice ():
-    r = sr.Recognizer()
-     
-    with sr.Microphone(device_index=1) as source:
-        r.adjust_for_ambient_noise(source)
-        print("Berbicara")
-        r.pause_threshold = 1
-        audio = r.listen(source)
-  
-    try:
-        print("Mengolah")   
-        query = r.recognize_google(audio, language ='id')
-        print("Kamu Berbicara: " + query)
-  
-    except Exception as e:
-        print(e)
-        print("Tidak dapat mendengar apapun") 
-        return "None"
-     
-    return query       
+import serial
+from keras.models import load_model
 
 def response(chat) :
     prechat = text_preprocessing_process(chat)
@@ -152,36 +93,3 @@ def response(chat) :
     else:
         print(respons)
         speak(respons)
-
-if __name__ == '__main__':
-    listener = sr.Recognizer()
-    player = pyttsx3.init()
-
-    arduino = serial.Serial('COM3',115200)
-
-    #Pretrained Model
-    PRE_TRAINED_MODEL = 'indobenchmark/indobert-base-p2'
-
-    #Load tokenizer dari pretrained model
-    bert_tokenizer = BertTokenizer.from_pretrained(PRE_TRAINED_MODEL)
-
-    # Load hasil fine-tuning
-    bert_load_model = TFBertForSequenceClassification.from_pretrained(PRE_TRAINED_MODEL, num_labels=35)
-    bert_load_model.load_weights('Python/Model/bert-SaVi.h5')
-
-    
-    while True:
-        print("tekan a untuk chat, tekan b untuk voice, tekan q untuk quit")
-        if keyboard.read_key()== "a":
-            response(chatbot())  
-        
-        elif keyboard.read_key()== "b":
-            response(voice())
-        
-        elif keyboard.read_key()== "q":
-            break
-
-        else:
-            print("Perintah tidak ada")
-
-         
