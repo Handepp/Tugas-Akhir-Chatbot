@@ -1,7 +1,5 @@
 import numpy as np
-import pickle
 import time
-import locale
 from datetime import datetime
 from sklearn.preprocessing import LabelEncoder
 import tensorflow as tf
@@ -14,8 +12,6 @@ import serial
 
 import speech_recognition as sr
 import pyttsx3
-import gtts
-import playsound
 
 import keyboard
 
@@ -32,13 +28,13 @@ def Replace(value):
     value1 = str(value1)
     return value1
     
-
 def speak(text):
-    tts = gtts.gTTS(text=text, lang='id')
-    date_string = datetime.now().strftime("%d%m%Y%H%M%S")
-    filename = "voice"+date_string+".mp3"
-    tts.save(filename)
-    playsound.playsound(filename)
+    engine = pyttsx3.init()
+    voices = engine.getProperty('voices')
+    engine.setProperty('voice', voices[1].id)
+    engine.setProperty('rate', 175)
+    engine.say(text)
+    engine.runAndWait()
 
 def chatbot ():
     #global chat
@@ -81,41 +77,51 @@ def response(chat) :
     response_tag = le.inverse_transform([output])[0]
     respons = random.choice(responses[response_tag])
 
-    if(response_tag == 'wardas.maju'):
+    if(response_tag == 'SaVi.maju'):
         arduino.write(str.encode('{"chatbot":"Maju"}'))
         print(respons)
         speak(respons)
 
-    elif(response_tag == 'wardas.mundur'):
+    elif(response_tag == 'SaVi.mundur'):
         arduino.write(str.encode('{"chatbot":"Mundur"}'))
         print(respons)
         speak(respons)
 
-    elif(response_tag == 'wardas.stop'):
+    elif(response_tag == 'SaVi.stop'):
         arduino.write(str.encode('{"chatbot":"Stop"}'))
         print(respons)
         speak(respons)
         time.sleep(1)
 
-    elif(response_tag == 'wardas.slow'):
+    elif(response_tag == 'SaVi.slow'):
         arduino.write(str.encode('{"chatbot":"lambat"}'))
         print(respons)
         speak(respons)
         time.sleep(1)
 
-    elif(response_tag == 'wardas.medium'):
+    elif(response_tag == 'SaVi.medium'):
         arduino.write(str.encode('{"chatbot":"sedang"}'))
         print(respons)
         speak(respons)
         time.sleep(1)
 
-    elif(response_tag == 'wardas.fast'):
+    elif(response_tag == 'SaVi.fast'):
         arduino.write(str.encode('{"chatbot":"cepat"}'))
         print(respons)
         speak(respons)
         time.sleep(1)
+    
+    elif(response_tag == 'SaVi.kanan'):
+        arduino.write(str.encode('{"mode":"hall", "direct":"right"}'))
+        print(respons)
+        speak(respons)
 
-    elif(response_tag == 'wardas.suhu'):
+    elif(response_tag == 'SaVi.kiri'):
+        arduino.write(str.encode('{"mode":"hall", "direct":"left"}'))
+        print(respons)
+        speak(respons)
+
+    elif(response_tag == 'SaVi.suhu'):
         arduino.write(str.encode('{"chatbot":"temp"}'))
         data = arduino.readline().decode("utf-8").strip('\n').strip('\r')
         data = Replace(data)
@@ -123,7 +129,7 @@ def response(chat) :
         print(respons + " " + data + " " + "derajat celcius")
         speak(respons + " " + data + " " + "derajat celcius")
 
-    elif(response_tag == 'wardas.hump'):
+    elif(response_tag == 'SaVi.hump'):
         arduino.write(str.encode('{"chatbot":"hum"}'))
         data = arduino.readline().decode("utf-8").strip('\n').strip('\r')
         data = Replace(data)
@@ -131,15 +137,15 @@ def response(chat) :
         print(respons + " " + data + " " + "RH")
         speak(respons + " " + data + " " + "RH")
 
-    elif(response_tag == 'wardas.jam'):
+    elif(response_tag == 'SaVi.jam'):
         print(respons + ' ' + get_time("%H %M") + ' ' + part)
         speak(respons + ' ' + get_time("%H %M") + ' ' + part)
 
-    elif(response_tag == 'wardas.hari'):
+    elif(response_tag == 'SaVi.hari'):
         print(respons + ' ' + get_time("%A"))
         speak(respons + ' ' + get_time("%A")) 
 
-    elif(response_tag == 'wardas.tanggal'):
+    elif(response_tag == 'SaVi.tanggal'):
         print(respons + ' ' + get_time("%d %B %Y"))
         speak(respons + ' ' + get_time("%d %B %Y")) 
 
@@ -160,8 +166,8 @@ if __name__ == '__main__':
     bert_tokenizer = BertTokenizer.from_pretrained(PRE_TRAINED_MODEL)
 
     # Load hasil fine-tuning
-    bert_load_model = TFBertForSequenceClassification.from_pretrained(PRE_TRAINED_MODEL, num_labels=32)
-    bert_load_model.load_weights('Python/Model/bert-wardas.h5')
+    bert_load_model = TFBertForSequenceClassification.from_pretrained(PRE_TRAINED_MODEL, num_labels=35)
+    bert_load_model.load_weights('Python/Model/bert-SaVi.h5')
 
     
     while True:
