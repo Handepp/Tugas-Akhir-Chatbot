@@ -23,8 +23,9 @@ engine.setProperty('voice', voices[1].id)
 #print(voices[1].id)
 engine.setProperty('rate', 175)
 # engine.say("Hello, How are you ?")
-for v in voices:
-    print(v)
+#for v in voices:
+    #print(v)
+
 engine.runAndWait()
 
 
@@ -32,6 +33,6 @@ def speak(str):
     engine.say(str)
     engine.runAndWait()
 
-respon = ""
+respon = ["Kamu siapa"]
 
 speak(respon)

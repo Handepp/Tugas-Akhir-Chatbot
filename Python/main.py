@@ -60,7 +60,11 @@ def voice ():
         print("Tidak dapat mendengar apapun") 
         return "None"
      
-    return query       
+    return query
+
+def arduino_write(write,read):
+    #arduino.write(command)
+    print("test")       
 
 def response(chat) :
     prechat = text_preprocessing_process(chat)
@@ -73,56 +77,56 @@ def response(chat) :
     bert_predict = tf.nn.softmax(bert_predict[0], axis=-1)         # Softmax function untuk mendapatkan hasil klasifikasi
     output = tf.argmax(bert_predict, axis=1)
 
-
+    
     response_tag = le.inverse_transform([output])[0]
     respons = random.choice(responses[response_tag])
 
     if(response_tag == 'SaVi.maju'):
-        arduino.write(str.encode('{"chatbot":"Maju"}'))
+        arduino_write(str.encode('{"chatbot":"Maju"}'))
         print(respons)
         speak(respons)
 
     elif(response_tag == 'SaVi.mundur'):
-        arduino.write(str.encode('{"chatbot":"Mundur"}'))
+        arduino_write(str.encode('{"chatbot":"Mundur"}'))
         print(respons)
         speak(respons)
 
     elif(response_tag == 'SaVi.stop'):
-        arduino.write(str.encode('{"chatbot":"Stop"}'))
+        arduino_write(str.encode('{"chatbot":"Stop"}'))
         print(respons)
         speak(respons)
         time.sleep(1)
 
     elif(response_tag == 'SaVi.slow'):
-        arduino.write(str.encode('{"chatbot":"lambat"}'))
+        arduino_write(str.encode('{"chatbot":"lambat"}'))
         print(respons)
         speak(respons)
         time.sleep(1)
 
     elif(response_tag == 'SaVi.medium'):
-        arduino.write(str.encode('{"chatbot":"sedang"}'))
+        arduino_write(str.encode('{"chatbot":"sedang"}'))
         print(respons)
         speak(respons)
         time.sleep(1)
 
     elif(response_tag == 'SaVi.fast'):
-        arduino.write(str.encode('{"chatbot":"cepat"}'))
+        arduino_write(str.encode('{"chatbot":"cepat"}'))
         print(respons)
         speak(respons)
         time.sleep(1)
     
     elif(response_tag == 'SaVi.kanan'):
-        arduino.write(str.encode('{"mode":"hall", "direct":"right"}'))
+        arduino_write(str.encode('{"mode":"hall", "direct":"right"}'))
         print(respons)
         speak(respons)
 
     elif(response_tag == 'SaVi.kiri'):
-        arduino.write(str.encode('{"mode":"hall", "direct":"left"}'))
+        arduino_write(str.encode('{"mode":"hall", "direct":"left"}'))
         print(respons)
         speak(respons)
 
     elif(response_tag == 'SaVi.suhu'):
-        arduino.write(str.encode('{"chatbot":"temp"}'))
+        arduino_write(str.encode('{"chatbot":"temp"}'))
         data = arduino.readline().decode("utf-8").strip('\n').strip('\r')
         data = Replace(data)
         print(data)
@@ -130,7 +134,7 @@ def response(chat) :
         speak(respons + " " + data + " " + "derajat celcius")
 
     elif(response_tag == 'SaVi.hump'):
-        arduino.write(str.encode('{"chatbot":"hum"}'))
+        arduino_write(str.encode('{"chatbot":"hum"}'))
         data = arduino.readline().decode("utf-8").strip('\n').strip('\r')
         data = Replace(data)
         print(data)
@@ -157,7 +161,7 @@ if __name__ == '__main__':
     listener = sr.Recognizer()
     player = pyttsx3.init()
 
-    arduino = serial.Serial('COM3',115200)
+    #arduino = serial.Serial('COM3',115200)
 
     #Pretrained Model
     PRE_TRAINED_MODEL = 'indobenchmark/indobert-base-p2'
@@ -169,7 +173,7 @@ if __name__ == '__main__':
     bert_load_model = TFBertForSequenceClassification.from_pretrained(PRE_TRAINED_MODEL, num_labels=35)
     bert_load_model.load_weights('Python/Model/bert-SaVi.h5')
 
-    
+    speak(random.choice(responses[classes[11]]))
     while True:
         print("tekan a untuk chat, tekan b untuk voice, tekan q untuk quit")
         if keyboard.read_key()== "a":

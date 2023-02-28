@@ -41,6 +41,8 @@ for intent in data1['intents']:
       if intent['tag'] not in classes:
         classes.append(intent['tag'])
 
+print(classes[11])
+
 data = pd.DataFrame({"patterns":inputs, "tags":tags})
 
 le = LabelEncoder()

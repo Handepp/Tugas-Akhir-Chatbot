@@ -10,7 +10,7 @@
     
     
     {
-      "tag": "SaVi.siapa",
+      "tag": "SAVI.siapa",
       "patterns": [
         "Siapa kamu?",
         "Kamu siapa?",
@@ -23,19 +23,19 @@
         "Kamu berguna untuk apa?",
         "Kamu itu apa?",
         "Jelasan diri kamu?",
-        "SaVi itu untuk apa?",
+        "SAVI itu untuk apa?",
         "Katakan tentang anda",
         "Ceritakan tentang anda",
         "Bicara tentang dirimu"
       ],
       "responses": [
-        "Hai, saya adalah SaVi, Wahana Cerdas. Saya adalah wahana untuk mengirimkan barang secara otonom",
-        "Saya adalah SaVi, Wahana Cerdas. Saya berguna untuk mengirimkan barang secara otonom"
+        "Hai, saya adalah SAVI, Wahana Cerdas. Saya adalah wahana untuk mengirimkan barang secara otonom",
+        "Saya adalah SAVI, Wahana Cerdas. Saya berguna untuk mengirimkan barang secara otonom"
       ]
     },
 
     {
-      "tag": "SaVi.usia",
+      "tag": "SAVI.usia",
       "patterns": [
         "Umurmu",
         "Berapa umurmu",
@@ -57,7 +57,7 @@
     },
 
     {
-      "tag": "SaVi.buruk",
+      "tag": "SAVI.buruk",
       "patterns": [
         "Robot bodoh",
         "Kamu ini bodoh",
@@ -79,7 +79,7 @@
     },
 
     {
-      "tag": "SaVi.insaf",
+      "tag": "SAVI.insaf",
       "patterns": [
         "Semoga kamu menjadi lebih baik",
         "Semoga kamu menjadi pintar",
@@ -99,15 +99,16 @@
     },
 
     {
-      "tag": "SaVi.bos",
+      "tag": "SAVI.bos",
       "patterns": [
-        "Siapa pemilikmu", 
-        "Siapa pengembangmu",
-        "Siapa bosmu?",
+        "Pemilikmu?", 
+        "Pengembangmu?",
+        "Bosmu?",
         "Siapa yang mengembangkanmu?",
         "Pemilikmu itu siapa?",
         "Kamu dikembangkan oleh siapa?",
-        "Punya siapakah kamu?"
+        "Robot ini milik siapa?",
+        "Kamu itu punya siapa?"
       ],
       "responses": [
         "Saya dikembangkan oleh mahasiswa Teknik Elektro di Universitas Padjadjaran",
@@ -116,14 +117,14 @@
     },
 
     {
-      "tag": "SaVi.bantu",
+      "tag": "SAVI.bantu",
       "patterns": [
-        "SaVi, bantu aku sekarang",
+        "SAVI, bantu aku sekarang",
         "Bisakah kamu membantu ku?",
         "Bantu aku sekarang",
         "Aku butuh bantuanmu",
-        "Bantu aku SaVi",
-        "Tolong aku SaVi",
+        "Bantu aku SAVI",
+        "Tolong aku SAVI",
         "Tolong saya"
       ],
       "responses": [
@@ -135,7 +136,7 @@
     },
 
     {
-      "tag": "SaVi.hobby",
+      "tag": "SAVI.hobby",
       "patterns": [
         "Apakah kamu memiliki hobi?",
         "Apa hobimu?",
@@ -155,7 +156,7 @@
     },
 
     {
-      "tag": "SaVi.siap",
+      "tag": "SAVI.siap",
       "patterns": [
         "Apakah kamu siap?",
         "Apakah robot sudah siap?",
@@ -173,7 +174,7 @@
     },
 
     {
-      "tag": "SaVi.asal",
+      "tag": "SAVI.asal",
       "patterns": [
         "Darimana asalmu?",
         "Kamu berasal dari mana?",
@@ -192,7 +193,7 @@
     },
 
     {
-      "tag": "SaVi.benar",
+      "tag": "SAVI.benar",
       "patterns": [
         "Kamu benar",
         "Kamu mengatakan yang sebenarnya",
@@ -213,7 +214,7 @@
     },
 
     {
-      "tag": "SaVi.ngobrol",
+      "tag": "SAVI.ngobrol",
       "patterns": [
         "Ayo berbicara denganku",
         "Ayo mengobrol",
@@ -222,7 +223,7 @@
         "Ngobrol yu",
         "Mari berbicara",
         "Ayo kita mengobrol",
-        "Waktunya untuk berbicara SaVi",
+        "Waktunya untuk berbicara SAVI",
         "Saatnya kita berbicara"
       ],
       "responses": [
@@ -232,14 +233,14 @@
     },
 
     {
-      "tag": "SaVi.sapa",
+      "tag": "SAVI.sapa",
       "patterns": [
-        "Halo SaVi!",
+        "Halo SAVI!",
         "Haiiii",
         "Haloooo",
         "Hello",
-        "Hai SaVi",
-        "yoo SaVi",
+        "Hai SAVI",
+        "yoo SAVI",
         "Heyooo",
         "Hallooo",
         "Hei hei hei",
@@ -247,20 +248,20 @@
         "Woiiiii"
       ],
       "responses": [
-        "Halo, SaVi disini, Ada yang bisa saya bantu?",
-        "Hai, SaVi disini",
-        "Hai juga, Ada yang bisa SaVi bantu?"
+        "Halo, SAVI disini, Ada yang bisa saya bantu?",
+        "Hai, SAVI disini",
+        "Hai juga, Ada yang bisa SAVI bantu?"
       ]
     },
 
     {
-      "tag": "SaVi.siang",
+      "tag": "SAVI.siang",
       "patterns": [
-        "Selamat Siang SaVi",
+        "Selamat Siang SAVI",
         "Siang",
         "Selamat siang",
-        "Siang SaVi",
-        "Halo siang SaVi"
+        "Siang SAVI",
+        "Halo siang SAVI"
       ],
       "responses": [
         "Selamat siang juga, Ada yang bisa saya bantu?",
@@ -269,13 +270,13 @@
     },
 
     {
-      "tag": "SaVi.pagi",
+      "tag": "SAVI.pagi",
       "patterns": [
-        "Selamat pagi SaVi",
+        "Selamat pagi SAVI",
         "pagi",
         "Selamat pagi",
-        "pagi SaVi",
-        "Halo pagi SaVi"
+        "pagi SAVI",
+        "Halo pagi SAVI"
       ],
       "responses": [
         "Selamat pagi juga, Ada yang bisa saya bantu?",
@@ -284,13 +285,13 @@
     },
 
     {
-      "tag": "SaVi.sore",
+      "tag": "SAVI.sore",
       "patterns": [
-        "Selamat sore SaVi",
+        "Selamat sore SAVI",
         "sore",
         "Selamat sore",
-        "sore SaVi",
-        "Halo sore SaVi"
+        "sore SAVI",
+        "Halo sore SAVI"
       ],
       "responses": [
         "Selamat sore, Ada yang bisa saya bantu?",
@@ -299,13 +300,13 @@
     },
 
     {
-      "tag": "SaVi.malam",
+      "tag": "SAVI.malam",
       "patterns": [
-        "Selamat malam SaVi",
+        "Selamat malam SAVI",
         "malam",
         "Selamat malam",
-        "malam SaVi",
-        "Halo malam SaVi"
+        "malam SAVI",
+        "Halo malam SAVI"
       ],
       "responses": [
         "Selamat malam, Ada yang bisa saya bantu?",
@@ -314,7 +315,7 @@
     },
 
     {
-      "tag": "SaVi.baik",
+      "tag": "SAVI.baik",
       "patterns": [
         "kabarku baik, Tidak masalah",
         "Aku baik",
@@ -329,7 +330,7 @@
     },
 
     {
-      "tag": "SaVi.lokasi",
+      "tag": "SAVI.lokasi",
       "patterns": [
         "Kamu berada dimana?",
         "Robot kamu dimana?",
@@ -349,7 +350,7 @@
     },
 
     {
-      "tag": "SaVi.suhu",
+      "tag": "SAVI.suhu",
       "patterns": [
         "Berapa suhu ruangan ini",
         "Suhu ruangan ini",
@@ -370,7 +371,7 @@
     },
 
     {
-      "tag": "SaVi.hump",
+      "tag": "SAVI.hump",
       "patterns": [
         "Berapa Kelembapan ruangan ini",
         "Kelembapan ruangan ini",
@@ -391,11 +392,11 @@
     },
 
     {
-      "tag": "SaVi.terimakasih",
+      "tag": "SAVI.terimakasih",
       "patterns": [
         "Makasih",
         "Terima Kasih",
-        "Makasih SaVi",
+        "Makasih SAVI",
         "Thanks",
         "Thank you",
         "Tengkyu",
@@ -409,7 +410,7 @@
     },
 
     {
-      "tag": "SaVi.berpisah",
+      "tag": "SAVI.berpisah",
       "patterns": [
         "Selamat tinggal",
         "Dadah",
@@ -426,7 +427,7 @@
     },
 
     {
-      "tag": "SaVi.jam",
+      "tag": "SAVI.jam",
       "patterns": [
         "Jam berapa sekarang",
         "Beritahu aku waktu sekarang",
@@ -445,7 +446,7 @@
     },
 
     {
-      "tag": "SaVi.hari",
+      "tag": "SAVI.hari",
       "patterns": [
         "hari apa sekarang",
         "hari ini hari apa",
@@ -464,7 +465,7 @@
     },
 
     {
-      "tag": "SaVi.tanggal",
+      "tag": "SAVI.tanggal",
       "patterns": [
         "Tanggal berapa sekarang",
         "Sekarang tanggal berapa",
@@ -483,7 +484,7 @@
     },
 
     {
-      "tag": "SaVi.beban",
+      "tag": "SAVI.beban",
       "patterns": [
         "Berapa [beban|berat] yang dapat dibawa robot",
         "Robot ini dapat membawa [beban|berat] hingga berapa ",
@@ -501,7 +502,7 @@
     },
 
     {
-      "tag": "SaVi.slow",
+      "tag": "SAVI.slow",
       "patterns": [
         "Ubah kecepatan menjadi lambat",
         "Lambatkan kecepatanmu",
@@ -521,7 +522,7 @@
     },
 
     {
-      "tag": "SaVi.medium",
+      "tag": "SAVI.medium",
       "patterns": [
         "Ubah kecepatan menjadi [sedang|medium]",
         "[sedang|medium]kan kecepatanmu",
@@ -542,7 +543,7 @@
     },
 
     {
-      "tag": "SaVi.fast",
+      "tag": "SAVI.fast",
       "patterns": [
         "Ubah kecepatan menjadi cepat",
         "cepatkan kecepatanmu",
@@ -562,7 +563,7 @@
     },
 
     {
-      "tag": "SaVi.Baterai",
+      "tag": "SAVI.Baterai",
       "patterns": [
         "Tunjukan dayamu",
         "Baterai berapa persen lagi",
@@ -582,7 +583,7 @@
     },
 
     {
-      "tag": "SaVi.maju",
+      "tag": "SAVI.maju",
       "patterns": [
         "Bergerak maju",
         "maju jalan",
@@ -605,30 +606,30 @@
     },
 
     {
-      "tag": "SaVi.mundur",
+      "tag": "SAVI.mundur",
       "patterns": [
         "Bergerak mundur",
         "mundur jalan",
         "mundur",
         "mundur ke belakang",
-        "mundurlah kedepan",
         "munduruuuuuuuuuuuuuuu",
         "mundur mundur mundur mundur",
-        "mundurlah kedepan",
-        "mundurlah"
+        "mundurlah kebelakang",
+        "mundurlah",
+        "Robot, mundur"
       ],
       "responses": [
         "Bergerak mundur",
         "Saya akan mundur",
         "Robot mundur",
-        "mundur kedepan",
-        "Bergerak ke arah depan",
+        "mundur kebelakang",
+        "Bergerak ke arah belakang",
         "Robot bergerak mundur"
       ]
     },
 
     {
-      "tag": "SaVi.stop",
+      "tag": "SAVI.stop",
       "patterns": [
         "Berhenti",
         "Berhenti Bergerak",
@@ -636,7 +637,7 @@
         "Cukup sampai disini",
         "Berhenti untuk saat ini",
         "Robot berhenti",
-        "SaVi berhenti",
+        "SAVI berhenti",
         "Diam",
         "Cukup diam",
         "Jangan bergerak"
@@ -652,7 +653,7 @@
     },
 
     {
-      "tag": "SaVi.kanan",
+      "tag": "SAVI.kanan",
       "patterns": [
         "Belok ke kanan",
         "Berbelok lah ke kanan",
@@ -676,7 +677,7 @@
     },
 
     {
-      "tag": "SaVi.kiri",
+      "tag": "SAVI.kiri",
       "patterns": [
         "Belok ke kiri",
         "Berbelok lah ke kiri",
