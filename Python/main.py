@@ -173,7 +173,7 @@ if __name__ == '__main__':
 
     # Load hasil fine-tuning
     bert_load_model = TFBertForSequenceClassification.from_pretrained(PRE_TRAINED_MODEL, num_labels=35)
-    bert_load_model.load_weights('Python/Model/bert-SaVi.h5')
+    bert_load_model.load_weights('Python/Model/bert-SAVI_1.h5')
 
     speak(random.choice(responses[classes[11]]))
     while True:

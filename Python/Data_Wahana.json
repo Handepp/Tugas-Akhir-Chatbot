@@ -12,6 +12,7 @@
     {
       "tag": "SAVI.siapa",
       "patterns": [
+        "Siapa?",
         "Siapa kamu?",
         "Kamu siapa?",
         "Ini apa?",
@@ -29,8 +30,8 @@
         "Bicara tentang dirimu"
       ],
       "responses": [
-        "Hai, saya adalah SAVI, Wahana Cerdas. Saya adalah wahana untuk mengirimkan barang secara otonom",
-        "Saya adalah SAVI, Wahana Cerdas. Saya berguna untuk mengirimkan barang secara otonom"
+        "Hai, saya adalah SAVI, sebuah robot Wahana Cerdas. Saya adalah wahana untuk mengirimkan barang secara otonom",
+        "Saya adalah SAVI, sebuah robot Wahana Cerdas. Saya berguna untuk mengirimkan barang secara otonom"
       ]
     },
 
@@ -107,8 +108,7 @@
         "Siapa yang mengembangkanmu?",
         "Pemilikmu itu siapa?",
         "Kamu dikembangkan oleh siapa?",
-        "Robot ini milik siapa?",
-        "Kamu itu punya siapa?"
+        "Milik siapakah ini?"
       ],
       "responses": [
         "Saya dikembangkan oleh mahasiswa Teknik Elektro di Universitas Padjadjaran",
