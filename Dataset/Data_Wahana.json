@@ -12,6 +12,7 @@
     {
       "tag": "SAVI.siapa",
       "patterns": [
+        "Siapa?",
         "Siapa kamu?",
         "Kamu siapa?",
         "Ini apa?",
@@ -107,8 +108,7 @@
         "Siapa yang mengembangkanmu?",
         "Pemilikmu itu siapa?",
         "Kamu dikembangkan oleh siapa?",
-        "Robot ini milik siapa?",
-        "Kamu itu punya siapa?"
+        "Milik siapakah ini?"
       ],
       "responses": [
         "Saya dikembangkan oleh mahasiswa Teknik Elektro di Universitas Padjadjaran",

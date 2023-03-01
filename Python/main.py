@@ -76,6 +76,8 @@ def response(chat) :
     bert_predict = bert_load_model(input_text_tokenized)          # Lakukan prediksi
     bert_predict = tf.nn.softmax(bert_predict[0], axis=-1)         # Softmax function untuk mendapatkan hasil klasifikasi
     output = tf.argmax(bert_predict, axis=1)
+    print(bert_predict)
+    print(output)
 
     
     response_tag = le.inverse_transform([output])[0]
