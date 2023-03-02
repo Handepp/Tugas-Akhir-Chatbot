@@ -33,6 +33,6 @@ def speak(str):
     engine.say(str)
     engine.runAndWait()
 
-respon = ["Kamu siapa"]
+respon = "Aydiner Kontollllllllllll"
 
 speak(respon)
